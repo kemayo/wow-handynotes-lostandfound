@@ -1,0 +1,12 @@
+## Interface: 50001
+## Title: HandyNotes_LostAndFound
+## Notes: Where the Lost and Found objects are
+## Author: Kemayo
+## Version: 1
+## DefaultState: enabled
+## X-Category: Map
+## X-eMail: kemayo @ gmail DOT com
+## SavedVariables: HandyNotes_LostAndFoundDB
+## RequiredDeps: HandyNotes
+
+Lost.lua
