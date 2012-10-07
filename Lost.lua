@@ -15,7 +15,8 @@ local defaults = {
     profile = {
         achievement_only = true,
         icon_scale = 1.0,
-        icon_alpha = 0.8,
+        icon_alpha = 1.0,
+        icon_item = true,
     },
 }
 
@@ -133,7 +134,7 @@ end
 local point_info_handlers = {
     item = function(id)
         local name, link, _, _, _, _, _, _, _, texture = GetItemInfo(id)
-        return link or 'item:'..id, trimmed_icon(texture or default_texture)
+        return link or 'item:'..id, trimmed_icon(db.icon_item and texture or default_texture)
     end,
     plain = function(id)
         return id, trimmed_icon(default_texture)
@@ -290,6 +291,11 @@ local options = {
             desc = "The alpha transparency of the icons",
             min = 0, max = 1, step = 0.01,
             order = 30,
+        },
+        icon_item = {
+            type = "toggle",
+            name = "Item icons",
+            desc = "Show the icons for items, if known; otherwise, the achievement icon will be used",
         },
         achievement_only = {
             type = "toggle",
