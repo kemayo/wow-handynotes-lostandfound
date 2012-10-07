@@ -94,6 +94,7 @@ local points = {
         [42309200] = { type="plain", id="Equipment Locker", },
         [52308870] = { type="item", id=87266, note="in a barrel" }, -- Recipe: Banana Infused Rum
         [50804930] = { type="item", id=86124, }, -- Pandaren Fishing Spear
+        [52007300] = { type="item", id=87798, junk=true, }, -- Stack of Papers
     },
     ["ValeofEternalBlossoms"] = {
         -- nothing?
