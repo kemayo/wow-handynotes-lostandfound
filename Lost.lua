@@ -100,12 +100,11 @@ local points = {
         -- nothing?
     },
     ["TheJadeForest"] = {
-        [39400730] = { type="item", id=85776, }, -- Wodin's Mantid Shaker
-        [39264665] = { type="item", id=86199, }, -- Jade Infused Blade
+        [39400730] = { type="item", id=85776, note="in the well", }, -- Wodin's Mantid Shaker
+        [39264665] = { type="item", id=86199, note="on Jade Warrior Statue", }, -- Jade Infused Blade
         [43001160] = { type="item", id=86198, }, -- Hammer of Ten Thunders
         [41801760] = { type="item", id=86198, }, -- Hammer of Ten Thunders
-        [44102700] = { type="item", id=85777, }, -- Ancient Pandaren Mining Pick
-        [43803070] = { type="item", id=85777, }, -- Ancient Pandaren Mining Pick
+        [46102920] = { type="item", id=85777, note="in the cave", }, -- Ancient Pandaren Mining Pick
         [47106740] = { type="item", id=86196, }, --Ancient Jinyu Staff
         [46207120] = { type="item", id=86196, }, --Ancient Jinyu Staff
         [26203240] = { type="item", id=85780, junk=true, }, -- Ancient Pandaren Tea Pot
@@ -116,8 +115,17 @@ local points = {
         [74907670] = { type="item", id=86473, junk=true, }, -- The Hammer of Folly
         [55107200] = { type="plain", id="Forgotten Lockbox", junk=true, },
     },
+    -- cave in Kun-Lai
     ["TheDeeper"] = {
         [24106580] = { type="item", id=86394, level=12, }, -- Hozen Warrior Spear
+    },
+    -- cave in Jade Forest
+    ["GreenstoneQuarry"] = {
+        [33107800] = { type="item", id=85777, level=7, }, -- Ancient Pandaren Mining Pick
+        [44007050] = { type="item", id=85777, level=7, }, -- Ancient Pandaren Mining Pick
+        [43703850] = { type="item", id=85777, level=7, }, -- Ancient Pandaren Mining Pick
+        [38704750] = { type="item", id=85777, level=7, }, -- Ancient Pandaren Mining Pick
+        [32606270] = { type="item", id=85777, level=7, }, -- Ancient Pandaren Mining Pick
     },
 }
 
