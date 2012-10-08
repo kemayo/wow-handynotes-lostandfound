@@ -190,45 +190,50 @@ local function createWaypoint(button, mapFile, coord)
     end
 end
 
-local function generateMenu(button, level)
-    if (not level) then return end
-    for k in pairs(info) do info[k] = nil end
-    if (level == 1) then
-        -- Create the title of the menu
-        info.isTitle      = 1
-        info.text         = "HandyNotes - LostAndFound"
-        info.notCheckable = 1
-        UIDropDownMenu_AddButton(info, level)
+do
+    local currentZone, currentCoord
+    local function generateMenu(button, level)
+        if (not level) then return end
+        for k in pairs(info) do info[k] = nil end
+        if (level == 1) then
+            -- Create the title of the menu
+            info.isTitle      = 1
+            info.text         = "HandyNotes - LostAndFound"
+            info.notCheckable = 1
+            UIDropDownMenu_AddButton(info, level)
 
-        if TomTom or Cartographer_Waypoints then
-            -- Waypoint menu item
-            info.disabled     = nil
-            info.isTitle      = nil
-            info.notCheckable = nil
-            info.text = "Create waypoint"
-            info.icon = nil
-            info.func = createWaypoint
-            info.arg1 = clickedLandmarkZone
-            info.arg2 = clickedLandmark
+            if TomTom or Cartographer_Waypoints then
+                -- Waypoint menu item
+                info.disabled     = nil
+                info.isTitle      = nil
+                info.notCheckable = nil
+                info.text = "Create waypoint"
+                info.icon = nil
+                info.func = createWaypoint
+                info.arg1 = currentZone
+                info.arg2 = currentCoord
+                UIDropDownMenu_AddButton(info, level);
+            end
+
+            -- Close menu item
+            info.text         = "Close"
+            info.icon         = nil
+            info.func         = function() CloseDropDownMenus() end
+            info.arg1         = nil
+            info.notCheckable = 1
             UIDropDownMenu_AddButton(info, level);
         end
-
-        -- Close menu item
-        info.text         = "Close"
-        info.icon         = nil
-        info.func         = function() CloseDropDownMenus() end
-        info.arg1         = nil
-        info.notCheckable = 1
-        UIDropDownMenu_AddButton(info, level);
     end
-end
-local HL_Dropdown = CreateFrame("Frame", "HandyNotes_LostAndFoundDropdownMenu")
-HL_Dropdown.displayMode = "MENU"
-HL_Dropdown.initialize = generateMenu
+    local HL_Dropdown = CreateFrame("Frame", "HandyNotes_LostAndFoundDropdownMenu")
+    HL_Dropdown.displayMode = "MENU"
+    HL_Dropdown.initialize = generateMenu
 
-function HLHandler:OnClick(button, down, mapFile, coord)
-    if button == "RightButton" and not down then
-        ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
+    function HLHandler:OnClick(button, down, mapFile, coord)
+        if button == "RightButton" and not down then
+            currentZone = mapFile
+            currentCoord = coord
+            ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
+        end
     end
 end
 
