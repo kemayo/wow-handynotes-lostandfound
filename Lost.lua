@@ -37,7 +37,7 @@ local points = {
     -- [mapFile] = { [coord] = { type=[type], id=[id], junk=[bool], }, }
     -- [] = { type="item", id=, }, -- 
     ["KunLaiSummit"] = {
-        [24106580] = { type="item", id=86394, }, -- Hozen Warrior Spear
+        [52907140] = { type="item", id=86394, note="in the cave", }, -- Hozen Warrior Spear
         [35207640] = { type="item", id=86125, note="on Frozen Trail Packer", }, -- Kafa Press
         [74707490] = { type="plain", id="Sprite's Cloth Chest", },
         [57507100] = { type="plain", id="Sprite's Cloth Chest", },
@@ -115,6 +115,9 @@ local points = {
     ["TheHiddenPass"] = {
         [74907670] = { type="item", id=86473, junk=true, }, -- The Hammer of Folly
         [55107200] = { type="plain", id="Forgotten Lockbox", junk=true, },
+    },
+    ["TheDeeper"] = {
+        [24106580] = { type="item", id=86394, level=12, }, -- Hozen Warrior Spear
     },
 }
 
@@ -247,22 +250,26 @@ end
 
 do
     -- This is a custom iterator we use to iterate over every node in a given zone
+    local currentLevel
     local function iter(t, prestate)
         if not t then return nil end
         local state, value = next(t, prestate)
         while state do -- Have we reached the end of this zone?
             if value then
-                local label, icon, junk = get_point_info(value)
-                Debug("iter step", state, icon, db.icon_scale, db.icon_alpha)
-                if not (junk and db.achievement_only) then
-                    return state, nil, icon, db.icon_scale, db.icon_alpha
+                if not value.level or value.level == currentLevel then
+                    local label, icon, junk = get_point_info(value)
+                    Debug("iter step", state, icon, db.icon_scale, db.icon_alpha)
+                    if not (junk and db.achievement_only) then
+                        return state, nil, icon, db.icon_scale, db.icon_alpha
+                    end
                 end
             end
             state, value = next(t, state) -- Get next data
         end
         return nil, nil, nil, nil
     end
-    function HLHandler:GetNodes(mapFile)
+    function HLHandler:GetNodes(mapFile, minimap, level)
+        currentLevel = level
         return iter, points[mapFile], nil
     end
 end
