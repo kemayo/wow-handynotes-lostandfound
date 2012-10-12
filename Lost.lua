@@ -60,12 +60,15 @@ local points = {
         [66804800] = { type="item", id=86518, }, -- Yaungol Fire Carrier
         [62803410] = { type="plain", id="Abandoned Crate of Goods", junk=true, },
         [65808610] = { type="item", id=86472, junk=true, }, -- Amber Encased Moth
-        [56406480] = { type="item", id=86516, junk=true, }, -- Fragment of Dread
-        [36506120] = { type="item", id=86516, junk=true, }, -- Fragment of Dread
-        [36908760] = { type="item", id=86516, junk=true, }, -- Fragment of Dread
-        [48408860] = { type="item", id=86516, junk=true, }, -- Fragment of Dread
         [52805620] = { type="item", id=86517, junk=true, }, -- Hardened Sap of Kri'vess
         [57505850] = { type="item", id=86517, junk=true, }, -- Hardened Sap of Kri'vess
+        [32806160] = { type="item", id=86516, junk=true, note="in the cave", }, -- Fragment of Dread
+    },
+    ["NiuzaoCatacombs"] = {
+        [56406480] = { type="item", id=86516, junk=true, }, -- Fragment of Dread
+        [36908760] = { type="item", id=86516, junk=true, }, -- Fragment of Dread
+        [48408860] = { type="item", id=86516, junk=true, }, -- Fragment of Dread
+        [64502150] = { type="item", id=86516, junk=true, }, -- Fragment of Dread
     },
     ["ValleyoftheFourWinds"] = {
         [46802460] = { type="item", id=85973, note="on Ghostly Pandaren Fisherman", }, -- Ancient Pandaren Fishing Charm
