@@ -93,7 +93,7 @@ local points = {
     },
     ["DreadWastes"] = {
         [66306660] = { type="item", id=86522, quest=31433, }, -- Blade of the Prime
-        [25905030] = { type="item", id=86525, quest=31436, }, -- Bloodsoaked Chitin Fragment
+        [25905030] = { type="item", id=86525, quest=31436, note="in the underwater cave", }, -- Bloodsoaked Chitin Fragment
         [30209080] = { type="item", id=86524, quest=31435, }, -- Dissector's Staff of Mutation
         [33003010] = { type="item", id=86521, quest=31431, }, -- Lucid Amulet of the Agile Mind
         [48703000] = { type="item", id=86520, quest=31430, }, -- Malik's Stalwart Spear
