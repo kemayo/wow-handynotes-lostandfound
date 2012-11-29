@@ -176,6 +176,7 @@ local get_point_info = function(point)
     end
 end
 local get_point_info_by_coord = function(mapFile, coord)
+    mapFile = string.gsub(mapFile, "_terrain%d+$", "")
     return get_point_info(points[mapFile] and points[mapFile][coord])
 end
 
@@ -255,7 +256,7 @@ do
 
     function HLHandler:OnClick(button, down, mapFile, coord)
         if button == "RightButton" and not down then
-            currentZone = mapFile
+            currentZone = string.gsub(mapFile, "_terrain%d+$", "")
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         end
@@ -292,6 +293,7 @@ do
     end
     function HLHandler:GetNodes(mapFile, minimap, level)
         currentLevel = level
+        mapFile = string.gsub(mapFile, "_terrain%d+$", "")
         return iter, points[mapFile], nil
     end
 end
