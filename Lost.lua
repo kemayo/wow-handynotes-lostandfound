@@ -13,7 +13,9 @@ local function Debug(...) if debugf then debugf:AddMessage(string.join(", ", tos
 local db
 local defaults = {
     profile = {
-        achievement_only = true,
+        show_lost = true,
+        show_riches = true,
+        show_junk = true,
         found = false,
         icon_scale = 1.0,
         icon_alpha = 1.0,
@@ -43,17 +45,17 @@ local points = {
         [73107350] = { type="plain", id="Sprite's Cloth Chest", note="in the cave", quest=31412, },
         [71206260] = { type="item", id=88723, note="in Stash of Yaungol Weapons", quest=31421, }, -- Sturdy Yaungol Spear
         [44705240] = { type="item", id=86393, quest=31417, }, -- Tablet of Ren Yun
-        [64204510] = { type="item", id=86471, junk=true, quest=31420, }, -- Ancient Mogu Tablet
-        [50306170] = { type="plain", id="Hozen Treasure Cache", junk=true, note="in the cave", quest=31414, },
-        [36707980] = { type="plain", id="Lost Adventurer's Belongings", junk=true, quest=31418, },
+        [64234513] = { type="item", id=86471, riches=true, quest=31420, note="in the cave" }, -- Ancient Mogu Tablet
+        [50366177] = { type="plain", id="Hozen Treasure Cache", riches=true, note="in the cave", quest=31414, },
+        [36707970] = { type="plain", id="Lost Adventurer's Belongings", riches=true, quest=31418, },
         [47007300] = { type="plain", id="Mo-Mo's Treasure Chest", junk=true, quest=31868, },
-        [52605150] = { type="item", id=86430, junk=true, note="in Rikktik's Tiny Chest", quest=31419, }, -- Rikktik's Tick Remover
-        [72003390] = { type="item", id=86422, junk=true, quest=31416, }, -- Statue of Xuen
-        [59405300] = { type="plain", id="Stolen Sprite Treasure", junk=true, note="in the cave", quest=31415, },
-        [58407350] = { type="item", id=86427, junk=true, quest=31422, }, -- Terracotta Head
+        [52575154] = { type="item", id=86430, riches=true, note="in Rikktik's Tiny Chest", quest=31419, }, -- Rikktik's Tick Remover
+        [72013396] = { type="item", id=86422, riches=true, quest=31416, }, -- Statue of Xuen
+        [59405300] = { type="plain", id="Stolen Sprite Treasure", riches=true, note="in the cave", quest=31415, },
+        [59247303] = { type="item", id=86427, riches=true, quest=31422, }, -- Terracotta Head
     },
     ["KnucklethumpHole"] = { -- cave in Kun-Lai
-        [49405940] = { type="plain", id="Hozen Treasure Cache", junk=true, quest=31414, },
+        [49405940] = { type="plain", id="Hozen Treasure Cache", riches=true, quest=31414, },
     },
     ["TheDeeper"] = { -- cave in Kun-Lai
         [24106580] = { type="item", id=86394, level=12, quest=31413, }, -- Hozen Warrior Spear
@@ -62,22 +64,22 @@ local points = {
         [54706980] = { type="plain", id="Sprite's Cloth Chest", quest=31412, },
     },
     ["HowlingwindCavern"] = { -- cave in Kun-Lai
-        [41404420] = { type="plain", id="Stolen Sprite Treasure", junk=true, quest=31415, },
+        [41674412] = { type="plain", id="Stolen Sprite Treasure", riches=true, quest=31415, },
     },
     ["TownlongWastes"] = {
         [66304470] = { type="item", id=86518, quest=31425, }, -- Yaungol Fire Carrier
         [66804800] = { type="item", id=86518, quest=31425, }, -- Yaungol Fire Carrier
-        [62803410] = { type="plain", id="Abandoned Crate of Goods", junk=true, note="in a tent", quest=31427, },
-        [65808610] = { type="item", id=86472, junk=true, quest=31426, }, -- Amber Encased Moth
-        [52805620] = { type="item", id=86517, junk=true, quest=31424, }, -- Hardened Sap of Kri'vess
-        [57505850] = { type="item", id=86517, junk=true, quest=31424, }, -- Hardened Sap of Kri'vess
-        [32806160] = { type="item", id=86516, junk=true, note="in the cave", quest=31423, }, -- Fragment of Dread
+        [62823405] = { type="plain", id="Abandoned Crate of Goods", riches=true, note="in a tent", quest=31427, },
+        [65838608] = { type="item", id=86472, riches=true, quest=31426, }, -- Amber Encased Moth
+        [52845617] = { type="item", id=86517, riches=true, quest=31424, }, -- Hardened Sap of Kri'vess
+        [57505850] = { type="item", id=86517, riches=true, quest=31424, }, -- Hardened Sap of Kri'vess
+        [32806160] = { type="item", id=86516, riches=true, note="in the cave", quest=31423, }, -- Fragment of Dread
     },
     ["NiuzaoCatacombs"] = { -- cave in Townlong
-        [56406480] = { type="item", id=86516, junk=true, quest=31423, }, -- Fragment of Dread
-        [36908760] = { type="item", id=86516, junk=true, quest=31423, }, -- Fragment of Dread
-        [48408860] = { type="item", id=86516, junk=true, quest=31423, }, -- Fragment of Dread
-        [64502150] = { type="item", id=86516, junk=true, quest=31423, }, -- Fragment of Dread
+        [56406480] = { type="item", id=86516, riches=true, quest=31423, }, -- Fragment of Dread
+        [36908760] = { type="item", id=86516, riches=true, quest=31423, }, -- Fragment of Dread
+        [48408860] = { type="item", id=86516, riches=true, quest=31423, }, -- Fragment of Dread
+        [64502150] = { type="item", id=86516, riches=true, quest=31423, }, -- Fragment of Dread
     },
     ["ValleyoftheFourWinds"] = {
         [46802460] = { type="item", id=85973, note="on Ghostly Pandaren Fisherman", npc=64004, quest=31284, }, -- Ancient Pandaren Fishing Charm
@@ -89,7 +91,8 @@ local points = {
         [19004250] = { type="item", id=86218, quest=31407, }, -- Staff of the Hidden Master
         [43603740] = { type="plain", id="Cache of Pilfered Goods", quest=31406, },
         [92003900] = { type="item", id=87524, junk=true, quest=31869, }, -- Boat-Building Instructions
-        [23802840] = { type="plain", id="Virmen Treasure Cache", junk=true, quest=31405, },
+        [23712833] = { type="plain", id="Virmen Treasure Cache", riches=true, quest=31405, },
+        [75105510] = { type="item", id=86220, riches=true, quest=31408, } -- Saurok Stone Tablet
     },
     ["DreadWastes"] = {
         [66306660] = { type="item", id=86522, quest=31433, }, -- Blade of the Prime
@@ -108,7 +111,7 @@ local points = {
         [52308870] = { type="item", id=87266, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
         [50804930] = { type="item", id=86124, quest=31409, }, -- Pandaren Fishing Spear
         [52007300] = { type="item", id=87798, junk=true, quest=31863, }, -- Stack of Papers
-        [71000920] = { type="item", id=86220, junk=true, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
+        [71000920] = { type="item", id=86220, riches=true, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
     },
     ["ValeofEternalBlossoms"] = {
         -- nothing?
@@ -122,12 +125,12 @@ local points = {
         [46102920] = { type="item", id=85777, note="in the cave", quest=31399, }, -- Ancient Pandaren Mining Pick
         [47106740] = { type="item", id=86196, quest=31402, }, --Ancient Jinyu Staff
         [46207120] = { type="item", id=86196, quest=31402, }, --Ancient Jinyu Staff
-        [26203240] = { type="item", id=85780, junk=true, quest=31400, }, -- Ancient Pandaren Tea Pot
-        [31902780] = { type="item", id=85781, junk=true, quest=31401, }, -- Lucky Pandaren Coin
-        [23503500] = { type="item", id=86216, junk=true, quest=31404, }, -- Pandaren Ritual Stone
+        [26223235] = { type="item", id=85780, riches=true, quest=31400, }, -- Ancient Pandaren Tea Pot
+        [31962775] = { type="item", id=85781, riches=true, quest=31401, }, -- Lucky Pandaren Coin
+        [23493505] = { type="item", id=86216, riches=true, quest=31404, }, -- Pandaren Ritual Stone
         [24005300] = { type="plain", id="Chest of Supplies", junk=true, quest=31864, },
         [46308070] = { type="plain", id="Offering of Rememberance", junk=true, quest=31865, },
-        [70007400] = { type="plain", id="Ship's Locker", junk=true, quest=31396, },
+        [51229999] = { type="plain", id="Ship's Locker", riches=true, quest=31396, },
         [62452752] = { type="plain", id="Stash of Gems", junk=true, quest=31866, },
     },
     ["GreenstoneQuarry"] = { -- cave in Jade Forest
@@ -138,12 +141,13 @@ local points = {
         [32606270] = { type="item", id=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
     },
     ["TheHiddenPass"] = {
-        [74907670] = { type="item", id=86473, junk=true, quest=31428, }, -- The Hammer of Folly
+        [74937648] = { type="item", id=86473, riches=true, quest=31428, }, -- The Hammer of Folly
         [55107200] = { type="plain", id="Forgotten Lockbox", junk=true, quest=31867, },
     },
 }
 
 local default_texture = select(10, GetAchievementInfo(7284))
+local default_texture_riches = select(10, GetAchievementInfo(7997))
 local icon_cache = {}
 local trimmed_icon = function(texture)
     if not icon_cache[texture] then
@@ -158,21 +162,25 @@ local trimmed_icon = function(texture)
     return icon_cache[texture]
 end
 local point_info_handlers = {
-    item = function(id)
-        local name, link, _, _, _, _, _, _, _, texture = GetItemInfo(id)
-        return link or 'item:'..id, trimmed_icon(db.icon_item and texture or default_texture)
+    item = function(point)
+        local name, link, _, _, _, _, _, _, _, texture = GetItemInfo(point.id)
+        return link or 'item:'..point.id, trimmed_icon(db.icon_item and texture or (point.riches and default_texture_riches or default_texture))
     end,
-    plain = function(id)
-        return id, trimmed_icon(default_texture)
+    plain = function(point)
+        return point.id, trimmed_icon(point.riches and default_texture_riches or default_texture)
     end,
 }
 local get_point_info = function(point)
     if point then
-        local label, icon = point_info_handlers[point.type](point.id)
+        local label, icon = point_info_handlers[point.type](point)
         if point.note then
             label = ("%s (%s)"):format(label, point.note)
         end
-        return label, icon, point.junk, point.quest
+        if not (point.junk or point.riches) then
+            label = ("%s: %s"):format(ITEM_QUALITY3_DESC, label) -- rare
+        end
+        local category = point.junk and "junk" or (point.riches and "riches") or "lost"
+        return label, icon, category, point.quest
     end
 end
 local get_point_info_by_coord = function(mapFile, coord)
@@ -280,9 +288,28 @@ do
         while state do -- Have we reached the end of this zone?
             if value then
                 if not value.level or value.level == currentLevel then
-                    local label, icon, junk, quest = get_point_info(value)
-                    Debug("iter step", state, icon, db.icon_scale, db.icon_alpha)
-                    if not ((junk and db.achievement_only) or (not db.found and quest and IsQuestFlaggedCompleted(quest))) then
+                    local label, icon, category, quest = get_point_info(value)
+                    -- Debug("iter step", state, icon, db.icon_scale, db.icon_alpha, category, quest)
+                    if quest == 31865 then
+                        Debug(label, category, quest)
+                        Debug("SETTINGS", db.show_junk, db.show_riches, db.show_lost, db.found)
+                        Debug("TEST",
+                            (category ~= "junk" or db.show_junk),
+                            (category ~= "riches" or db.show_riches),
+                            (category ~= "lost" or db.show_lost),
+                            (db.found or not (quest and IsQuestFlaggedCompleted(quest))),
+                            (category ~= "junk" or db.show_junk)
+                                and (category ~= "riches" or db.show_riches)
+                                and (category ~= "lost" or db.show_lost)
+                                and (db.found or not (quest and IsQuestFlaggedCompleted(quest)))
+                        )
+                    end
+                    if (
+                        (category ~= "junk" or db.show_junk)
+                        and (category ~= "riches" or db.show_riches)
+                        and (category ~= "lost" or db.show_lost)
+                        and (db.found or not (quest and IsQuestFlaggedCompleted(quest)))
+                    ) then
                         return state, nil, icon, db.icon_scale, db.icon_alpha
                     end
                 end
@@ -334,10 +361,20 @@ local options = {
             name = "Item icons",
             desc = "Show the icons for items, if known; otherwise, the achievement icon will be used",
         },
-        achievement_only = {
+        show_lost = {
             type = "toggle",
-            name = "Achievement only",
-            desc = "Only show the items which count for the Lost and Found achievement (skips some vendorable greys).",
+            name = "Lost and Found",
+            desc = "Show items that count for the Lost and Found achievement",
+        },
+        show_riches = {
+            type = "toggle",
+            name = "Riches of Pandaria",
+            desc = "Show items that count for the Riches of Pandaria achievement",
+        },
+        show_junk = {
+            type = "toggle",
+            name = "Junk",
+            desc = "Show items which don't count for any achievement",
         },
         found = {
             type = "toggle",
