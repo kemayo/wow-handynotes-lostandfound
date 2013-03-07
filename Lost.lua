@@ -146,8 +146,7 @@ local points = {
     },
 }
 
-local default_texture = select(10, GetAchievementInfo(7284))
-local default_texture_riches = select(10, GetAchievementInfo(7997))
+local default_texture, default_texture_riches
 local icon_cache = {}
 local trimmed_icon = function(texture)
     if not icon_cache[texture] then
@@ -171,6 +170,10 @@ local point_info_handlers = {
     end,
 }
 local get_point_info = function(point)
+    if not default_texture then
+        default_texture = select(10, GetAchievementInfo(7284))
+        default_texture_riches = select(10, GetAchievementInfo(7997))
+    end
     if point then
         local label, icon = point_info_handlers[point.type](point)
         if point.note then
