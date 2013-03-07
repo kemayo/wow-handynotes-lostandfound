@@ -379,7 +379,7 @@ local options = {
         found = {
             type = "toggle",
             name = "Show found",
-            desc = "Show waypoints for iteme you've already found?",
+            desc = "Show waypoints for items you've already found?",
         },
     },
 }
