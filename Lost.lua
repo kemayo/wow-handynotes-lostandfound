@@ -55,7 +55,7 @@ local points = {
         [59247303] = { type="item", id=86427, riches=true, quest=31422, }, -- Terracotta Head
     },
     ["KnucklethumpHole"] = { -- cave in Kun-Lai
-        [49405940] = { type="plain", id="Hozen Treasure Cache", riches=true, quest=31414, },
+        [52002750] = { type="plain", id="Hozen Treasure Cache", riches=true, quest=31414, },
     },
     ["TheDeeper"] = { -- cave in Kun-Lai
         [24106580] = { type="item", id=86394, level=12, quest=31413, }, -- Hozen Warrior Spear
