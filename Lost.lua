@@ -144,6 +144,9 @@ local points = {
         [74937648] = { type="item", id=86473, riches=true, quest=31428, }, -- The Hammer of Folly
         [55107200] = { type="plain", id="Forgotten Lockbox", junk=true, quest=31867, },
     },
+    ["TimelessIsle"] = {
+        -- [] = { type="plain", id="", quest=, },
+    },
 }
 
 local default_texture, default_texture_riches
