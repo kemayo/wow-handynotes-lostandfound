@@ -307,19 +307,15 @@ function HLHandler:OnEnter(mapFile, coord)
 end
 
 local function createWaypoint(button, mapFile, coord)
-    local c, z = HandyNotes:GetCZ(mapFile)
-    local x, y = HandyNotes:getXY(coord)
-    local label = get_point_info_by_coord(mapFile, coord)
     if TomTom then
-        local persistent, minimap, world
-        if temporary then
-            persistent = true
-            minimap = false
-            world = false
-        end
-        TomTom:AddZWaypoint(c, z, x*100, y*100, label, persistent, minimap, world)
-    elseif Cartographer_Waypoints then
-        Cartographer_Waypoints:AddWaypoint(NotePoint:new(HandyNotes:GetCZToZone(c, z), x, y, label))
+        local mapId = HandyNotes:GetMapFiletoMapID(mapFile)
+        local x, y = HandyNotes:getXY(coord)
+        TomTom:AddMFWaypoint(mapId, nil, x, y, {
+            title = get_point_info_by_coord(mapFile, coord),
+            persistent = nil,
+            minimap = true,
+            world = true
+        })
     end
 end
 
@@ -335,7 +331,7 @@ do
             info.notCheckable = 1
             UIDropDownMenu_AddButton(info, level)
 
-            if TomTom or Cartographer_Waypoints then
+            if TomTom then
                 -- Waypoint menu item
                 info.disabled     = nil
                 info.isTitle      = nil
