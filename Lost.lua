@@ -32,124 +32,143 @@ local HandyNotes = HandyNotes
 local GetItemInfo = GetItemInfo
 local GetAchievementInfo = GetAchievementInfo
 local GetAchievementCriteriaInfo = GetAchievementCriteriaInfo
+local GetCurrencyInfo = GetCurrencyInfo
 
 ---------------------------------------------------------
 -- Constants
 
 local points = {
     -- [mapFile] = { [coord] = { type=[type], id=[id], junk=[bool], }, }
-    -- [] = { type="item", id=, }, -- 
+    -- [] = { item=, }, -- 
     ["KunLaiSummit"] = {
-        [52907140] = { type="item", id=86394, note="in the cave", quest=31413, }, -- Hozen Warrior Spear
-        [35207640] = { type="item", id=86125, note="on Frozen Trail Packer", quest=31304, npc=64227, }, -- Kafa Press
-        [73107350] = { type="plain", id="Sprite's Cloth Chest", note="in the cave", quest=31412, },
-        [71206260] = { type="item", id=88723, note="in Stash of Yaungol Weapons", quest=31421, }, -- Sturdy Yaungol Spear
-        [44705240] = { type="item", id=86393, quest=31417, }, -- Tablet of Ren Yun
-        [64234513] = { type="item", id=86471, riches=true, quest=31420, note="in the cave" }, -- Ancient Mogu Tablet
-        [50366177] = { type="plain", id="Hozen Treasure Cache", riches=true, note="in the cave", quest=31414, },
-        [36707970] = { type="plain", id="Lost Adventurer's Belongings", riches=true, quest=31418, },
-        [47007300] = { type="plain", id="Mo-Mo's Treasure Chest", junk=true, quest=31868, },
-        [52575154] = { type="item", id=86430, riches=true, note="in Rikktik's Tiny Chest", quest=31419, }, -- Rikktik's Tick Remover
-        [72013396] = { type="item", id=86422, riches=true, quest=31416, }, -- Statue of Xuen
-        [59405300] = { type="plain", id="Stolen Sprite Treasure", riches=true, note="in the cave", quest=31415, },
-        [59247303] = { type="item", id=86427, riches=true, quest=31422, }, -- Terracotta Head
+        [52907140] = { item=86394, note="in the cave", quest=31413, }, -- Hozen Warrior Spear
+        [35207640] = { item=86125, quest=31304, npc=64227, }, -- Kafa Press
+        [73107350] = { label="Sprite's Cloth Chest", note="in the cave", quest=31412, },
+        [71206260] = { item=88723, note="in Stash of Yaungol Weapons", quest=31421, }, -- Sturdy Yaungol Spear
+        [44705240] = { item=86393, quest=31417, }, -- Tablet of Ren Yun
+        [64234513] = { item=86471, achievement=7997, quest=31420, note="in the cave" }, -- Ancient Mogu Tablet
+        [50366177] = { label="Hozen Treasure Cache", achievement=7997, note="in the cave", quest=31414, },
+        [36707970] = { label="Lost Adventurer's Belongings", achievement=7997, quest=31418, },
+        [47007300] = { label="Mo-Mo's Treasure Chest", junk=true, quest=31868, },
+        [52575154] = { item=86430, achievement=7997, note="in Rikktik's Tiny Chest", quest=31419, }, -- Rikktik's Tick Remover
+        [72013396] = { item=86422, achievement=7997, quest=31416, }, -- Statue of Xuen
+        [59405300] = { label="Stolen Sprite Treasure", achievement=7997, note="in the cave", quest=31415, },
+        [59247303] = { item=86427, achievement=7997, quest=31422, }, -- Terracotta Head
     },
     ["KnucklethumpHole"] = { -- cave in Kun-Lai
-        [52002750] = { type="plain", id="Hozen Treasure Cache", riches=true, quest=31414, },
+        [52002750] = { label="Hozen Treasure Cache", achievement=7997, quest=31414, },
     },
     ["TheDeeper"] = { -- cave in Kun-Lai
-        [24106580] = { type="item", id=86394, level=12, quest=31413, }, -- Hozen Warrior Spear
+        [24106580] = { item=86394, level=12, quest=31413, }, -- Hozen Warrior Spear
     },
     ["PrankstersHollow"] = { -- cave in Kun-Lai
-        [54706980] = { type="plain", id="Sprite's Cloth Chest", quest=31412, },
+        [54706980] = { label="Sprite's Cloth Chest", quest=31412, },
     },
     ["HowlingwindCavern"] = { -- cave in Kun-Lai
-        [41674412] = { type="plain", id="Stolen Sprite Treasure", riches=true, quest=31415, },
+        [41674412] = { label="Stolen Sprite Treasure", achievement=7997, quest=31415, },
     },
     ["TownlongWastes"] = {
-        [66304470] = { type="item", id=86518, quest=31425, }, -- Yaungol Fire Carrier
-        [66804800] = { type="item", id=86518, quest=31425, }, -- Yaungol Fire Carrier
-        [62823405] = { type="plain", id="Abandoned Crate of Goods", riches=true, note="in a tent", quest=31427, },
-        [65838608] = { type="item", id=86472, riches=true, quest=31426, }, -- Amber Encased Moth
-        [52845617] = { type="item", id=86517, riches=true, quest=31424, }, -- Hardened Sap of Kri'vess
-        [57505850] = { type="item", id=86517, riches=true, quest=31424, }, -- Hardened Sap of Kri'vess
-        [32806160] = { type="item", id=86516, riches=true, note="in the cave", quest=31423, }, -- Fragment of Dread
+        [66304470] = { item=86518, quest=31425, }, -- Yaungol Fire Carrier
+        [66804800] = { item=86518, quest=31425, }, -- Yaungol Fire Carrier
+        [62823405] = { label="Abandoned Crate of Goods", achievement=7997, note="in a tent", quest=31427, },
+        [65838608] = { item=86472, achievement=7997, quest=31426, }, -- Amber Encased Moth
+        [52845617] = { item=86517, achievement=7997, quest=31424, }, -- Hardened Sap of Kri'vess
+        [57505850] = { item=86517, achievement=7997, quest=31424, }, -- Hardened Sap of Kri'vess
+        [32806160] = { item=86516, achievement=7997, note="in the cave", quest=31423, }, -- Fragment of Dread
     },
     ["NiuzaoCatacombs"] = { -- cave in Townlong
-        [56406480] = { type="item", id=86516, riches=true, quest=31423, }, -- Fragment of Dread
-        [36908760] = { type="item", id=86516, riches=true, quest=31423, }, -- Fragment of Dread
-        [48408860] = { type="item", id=86516, riches=true, quest=31423, }, -- Fragment of Dread
-        [64502150] = { type="item", id=86516, riches=true, quest=31423, }, -- Fragment of Dread
+        [56406480] = { item=86516, achievement=7997, quest=31423, }, -- Fragment of Dread
+        [36908760] = { item=86516, achievement=7997, quest=31423, }, -- Fragment of Dread
+        [48408860] = { item=86516, achievement=7997, quest=31423, }, -- Fragment of Dread
+        [64502150] = { item=86516, achievement=7997, quest=31423, }, -- Fragment of Dread
     },
     ["ValleyoftheFourWinds"] = {
-        [46802460] = { type="item", id=85973, note="on Ghostly Pandaren Fisherman", npc=64004, quest=31284, }, -- Ancient Pandaren Fishing Charm
-        [45403820] = { type="item", id=86079, note="on Ghostly Pandaren Craftsman", npc=64191, quest=31292, }, -- Ancient Pandaren Woodcutter
-        [15402920] = { type="item", id=86218, quest=31407, }, -- Staff of the Hidden Master
-        [14903360] = { type="item", id=86218, quest=31407, }, -- Staff of the Hidden Master
-        [17503570] = { type="item", id=86218, quest=31407, }, -- Staff of the Hidden Master
-        [19103780] = { type="item", id=86218, quest=31407, }, -- Staff of the Hidden Master
-        [19004250] = { type="item", id=86218, quest=31407, }, -- Staff of the Hidden Master
-        [43603740] = { type="plain", id="Cache of Pilfered Goods", quest=31406, },
-        [92003900] = { type="item", id=87524, junk=true, quest=31869, }, -- Boat-Building Instructions
-        [23712833] = { type="plain", id="Virmen Treasure Cache", riches=true, quest=31405, },
-        [75105510] = { type="item", id=86220, riches=true, quest=31408, } -- Saurok Stone Tablet
+        [46802460] = { item=85973, npc=64004, quest=31284, }, -- Ancient Pandaren Fishing Charm
+        [45403820] = { item=86079, npc=64191, quest=31292, }, -- Ancient Pandaren Woodcutter
+        [15402920] = { item=86218, quest=31407, }, -- Staff of the Hidden Master
+        [14903360] = { item=86218, quest=31407, }, -- Staff of the Hidden Master
+        [17503570] = { item=86218, quest=31407, }, -- Staff of the Hidden Master
+        [19103780] = { item=86218, quest=31407, }, -- Staff of the Hidden Master
+        [19004250] = { item=86218, quest=31407, }, -- Staff of the Hidden Master
+        [43603740] = { label="Cache of Pilfered Goods", quest=31406, },
+        [92003900] = { item=87524, junk=true, quest=31869, }, -- Boat-Building Instructions
+        [23712833] = { label="Virmen Treasure Cache", achievement=7997, quest=31405, },
+        [75105510] = { item=86220, achievement=7997, quest=31408, } -- Saurok Stone Tablet
     },
     ["DreadWastes"] = {
-        [66306660] = { type="item", id=86522, quest=31433, }, -- Blade of the Prime
-        [25905030] = { type="item", id=86525, quest=31436, note="in the underwater cave", }, -- Bloodsoaked Chitin Fragment
-        [30209080] = { type="item", id=86524, quest=31435, }, -- Dissector's Staff of Mutation
-        [33003010] = { type="item", id=86521, quest=31431, }, -- Lucid Amulet of the Agile Mind
-        [48703000] = { type="item", id=86520, quest=31430, }, -- Malik's Stalwart Spear
-        [42206360] = { type="item", id=86529, note="on Glinting Rapana Whelk", npc=65552, quest=31432, }, -- Manipulator's Talisman on a Glinting Rapana Whelk (65552)
-        [56607780] = { type="item", id=86523, quest=31434, }, -- Swarming Cleaver of Ka'roz
-        [54305650] = { type="item", id=86526, quest=31437, }, -- Swarmkeeper's Medallion
-        [71803610] = { type="item", id=86519, quest=31429, }, -- Wind-Reaver's Dagger of Quick Strikes
-        [28804190] = { type="item", id=86527, quest=31438, }, -- Blade of the Poisoned Mind
+        [66306660] = { item=86522, quest=31433, }, -- Blade of the Prime
+        [25905030] = { item=86525, quest=31436, note="in the underwater cave", }, -- Bloodsoaked Chitin Fragment
+        [30209080] = { item=86524, quest=31435, }, -- Dissector's Staff of Mutation
+        [33003010] = { item=86521, quest=31431, }, -- Lucid Amulet of the Agile Mind
+        [48703000] = { item=86520, quest=31430, }, -- Malik's Stalwart Spear
+        [42206360] = { item=86529, npc=65552, quest=31432, }, -- Manipulator's Talisman on a Glinting Rapana Whelk (65552)
+        [56607780] = { item=86523, quest=31434, }, -- Swarming Cleaver of Ka'roz
+        [54305650] = { item=86526, quest=31437, }, -- Swarmkeeper's Medallion
+        [71803610] = { item=86519, quest=31429, }, -- Wind-Reaver's Dagger of Quick Strikes
+        [28804190] = { item=86527, quest=31438, }, -- Blade of the Poisoned Mind
     },
     ["Krasarang"] = {
-        [42409200] = { type="plain", id="Equipment Locker", quest=31410, },
-        [52308870] = { type="item", id=87266, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
-        [50804930] = { type="item", id=86124, quest=31409, }, -- Pandaren Fishing Spear
-        [52007300] = { type="item", id=87798, junk=true, quest=31863, }, -- Stack of Papers
-        [71000920] = { type="item", id=86220, riches=true, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
+        [42409200] = { label="Equipment Locker", quest=31410, },
+        [52308870] = { item=87266, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
+        [50804930] = { item=86124, quest=31409, }, -- Pandaren Fishing Spear
+        [52007300] = { item=87798, junk=true, quest=31863, }, -- Stack of Papers
+        [71000920] = { item=86220, achievement=7997, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
     },
     ["ValeofEternalBlossoms"] = {
         -- nothing?
     },
     ["TheJadeForest"] = {
-        [39400730] = { type="item", id=85776, note="in the well", quest=31397, }, -- Wodin's Mantid Shaker
-        [39264665] = { type="item", id=86199, note="on Jade Warrior Statue", npc=64272, quest=31307, }, -- Jade Infused Blade
-        [43001160] = { type="item", id=86198, quest=31403, }, -- Hammer of Ten Thunders
-        [41801760] = { type="item", id=86198, quest=31403, }, -- Hammer of Ten Thunders
-        [41201390] = { type="item", id=86198, quest=31403, }, -- Hammer of Ten Thunders
-        [46102920] = { type="item", id=85777, note="in the cave", quest=31399, }, -- Ancient Pandaren Mining Pick
-        [47106740] = { type="item", id=86196, quest=31402, }, --Ancient Jinyu Staff
-        [46207120] = { type="item", id=86196, quest=31402, }, --Ancient Jinyu Staff
-        [26223235] = { type="item", id=85780, riches=true, quest=31400, }, -- Ancient Pandaren Tea Pot
-        [31962775] = { type="item", id=85781, riches=true, quest=31401, }, -- Lucky Pandaren Coin
-        [23493505] = { type="item", id=86216, riches=true, quest=31404, }, -- Pandaren Ritual Stone
-        [24005300] = { type="plain", id="Chest of Supplies", junk=true, quest=31864, },
-        [46308070] = { type="plain", id="Offering of Rememberance", junk=true, quest=31865, },
-        [51229999] = { type="plain", id="Ship's Locker", riches=true, quest=31396, },
-        [62452752] = { type="plain", id="Stash of Gems", junk=true, quest=31866, },
+        [39400730] = { item=85776, note="in the well", quest=31397, }, -- Wodin's Mantid Shaker
+        [39264665] = { item=86199, npc=64272, quest=31307, }, -- Jade Infused Blade
+        [43001160] = { item=86198, quest=31403, }, -- Hammer of Ten Thunders
+        [41801760] = { item=86198, quest=31403, }, -- Hammer of Ten Thunders
+        [41201390] = { item=86198, quest=31403, }, -- Hammer of Ten Thunders
+        [46102920] = { item=85777, note="in the cave", quest=31399, }, -- Ancient Pandaren Mining Pick
+        [47106740] = { item=86196, quest=31402, }, --Ancient Jinyu Staff
+        [46207120] = { item=86196, quest=31402, }, --Ancient Jinyu Staff
+        [26223235] = { item=85780, achievement=7997, quest=31400, }, -- Ancient Pandaren Tea Pot
+        [31962775] = { item=85781, achievement=7997, quest=31401, }, -- Lucky Pandaren Coin
+        [23493505] = { item=86216, achievement=7997, quest=31404, }, -- Pandaren Ritual Stone
+        [24005300] = { label="Chest of Supplies", junk=true, quest=31864, },
+        [46308070] = { label="Offering of Rememberance", junk=true, quest=31865, },
+        [51229999] = { label="Ship's Locker", achievement=7997, quest=31396, },
+        [62452752] = { label="Stash of Gems", junk=true, quest=31866, },
     },
     ["GreenstoneQuarry"] = { -- cave in Jade Forest
-        [33107800] = { type="item", id=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
-        [44007050] = { type="item", id=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
-        [43703850] = { type="item", id=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
-        [38704750] = { type="item", id=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
-        [32606270] = { type="item", id=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [33107800] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [44007050] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [43703850] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [38704750] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [32606270] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
     },
     ["TheHiddenPass"] = {
-        [74937648] = { type="item", id=86473, riches=true, quest=31428, }, -- The Hammer of Folly
-        [55107200] = { type="plain", id="Forgotten Lockbox", junk=true, quest=31867, },
+        [74937648] = { item=86473, achievement=7997, quest=31428, }, -- The Hammer of Folly
+        [55107200] = { label="Forgotten Lockbox", junk=true, quest=31867, },
     },
     ["TimelessIsle"] = {
-        -- [] = { type="plain", id="", quest=, },
+        -- [] = { label="", quest=, },
     },
 }
 
-local default_texture, default_texture_riches
+local cache_tooltip = CreateFrame("GameTooltip", "HNTreasureHunterTooltip")
+cache_tooltip:AddFontStrings(
+    cache_tooltip:CreateFontString("$parentTextLeft1", nil, "GameTooltipText"),
+    cache_tooltip:CreateFontString("$parentTextRight1", nil, "GameTooltipText")
+)
+local name_cache = {}
+local function mob_name(id)
+    if not name_cache[id] then
+        -- this doesn't work with just clearlines and the setowner outside of this, and I'm not sure why
+        cache_tooltip:SetOwner(WorldFrame, "ANCHOR_NONE")
+        cache_tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(id))
+        if cache_tooltip:IsShown() then
+            name_cache[id] = HNTreasureHunterTooltipTextLeft1:GetText()
+        end
+    end
+    return name_cache[id]
+end
+
+local default_texture
 local icon_cache = {}
 local trimmed_icon = function(texture)
     if not icon_cache[texture] then
@@ -163,35 +182,113 @@ local trimmed_icon = function(texture)
     end
     return icon_cache[texture]
 end
-local point_info_handlers = {
-    item = function(point)
-        local name, link, _, _, _, _, _, _, _, texture = GetItemInfo(point.id)
-        return link or 'item:'..point.id, trimmed_icon(db.icon_item and texture or (point.riches and default_texture_riches or default_texture))
-    end,
-    plain = function(point)
-        return point.id, trimmed_icon(point.riches and default_texture_riches or default_texture)
-    end,
-}
+local function work_out_label(point)
+    local fallback
+    if point.label then
+        return point.label
+    end
+    if point.item then
+        local _, link, _, _, _, _, _, _, _, texture = GetItemInfo(point.item)
+        if link then
+            return link
+        end
+        fallback = 'item:'..point.item
+    end
+    if point.npc then
+        local name = mob_name(point.npc)
+        if name then
+            return name
+        end
+        fallback = 'npc:'..point.npc
+    end
+    if point.currency then
+        local name, _, texture = GetCurrencyInfo(point.currency)
+        if name then
+            return name
+        end
+    end
+    return UNKNOWN
+end
+local function work_out_texture(point)
+    if point.item and db.icon_item then
+        local texture = select(10, GetItemInfo(point.item))
+        if texture then
+            return trimmed_icon(texture)
+        end
+    end
+    if point.currency then
+        local texture = select(3, GetCurrencyInfo(point.currency))
+        if texture then
+            return trimmed_icon(texture)
+        end
+    end
+    if point.achievement then
+        local texture = select(10, GetAchievementInfo(point.achievement))
+        if texture then
+            return trimmed_icon(texture)
+        end
+    end
+    -- if point.npc then
+
+    -- end
+    return trimmed_icon(default_texture)
+end
 local get_point_info = function(point)
     if not default_texture then
         default_texture = select(10, GetAchievementInfo(7284))
-        default_texture_riches = select(10, GetAchievementInfo(7997))
     end
     if point then
-        local label, icon = point_info_handlers[point.type](point)
-        if point.note then
-            label = ("%s (%s)"):format(label, point.note)
+        local label = work_out_label(point)
+        local icon = work_out_texture(point)
+        local category = "treasure"
+        if point.achievement == 7997 then
+            category = "riches"
+        -- elseif point.npc then
+        --     category = "npc"
+        elseif point.junk then
+            category = "junk"
         end
-        if not (point.junk or point.riches) then
-            label = ("%s: %s"):format(ITEM_QUALITY3_DESC, label) -- rare
-        end
-        local category = point.junk and "junk" or (point.riches and "riches") or "lost"
         return label, icon, category, point.quest
     end
 end
 local get_point_info_by_coord = function(mapFile, coord)
     mapFile = string.gsub(mapFile, "_terrain%d+$", "")
     return get_point_info(points[mapFile] and points[mapFile][coord])
+end
+
+local function handle_tooltip(tooltip, point)
+    if point then
+        -- major:
+        if point.label then
+            tooltip:AddLine(point.label)
+        elseif point.item then
+            tooltip:SetHyperlink(("item:%d"):format(point.item))
+        elseif point.npc then
+            tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
+        end
+
+        if point.item and point.npc then
+            tooltip:AddDoubleLine(CREATURE, mob_name(point.npc) or point.npc)
+        end
+        if point.currency then
+            local name = GetCurrencyInfo(point.currency)
+            tooltip:AddDoubleLine(CURRENCY, name or point.currency)
+        end
+        if point.achievement then
+            local _, name = GetAchievementInfo(point.achievement)
+            tooltip:AddDoubleLine(BATTLE_PET_SOURCE_6, name or point.achievement)
+        end
+        if point.note then
+            tooltip:AddLine(point.note)
+        end
+    else
+        tooltip:SetText(UNKNOWN)
+    end
+    tooltip:Show()
+end
+local handle_tooltip_by_coord = function(tooltip, mapFile, coord)
+    mapFile = string.gsub(mapFile, "_terrain%d+$", "")
+    return handle_tooltip(tooltip, points[mapFile] and points[mapFile][coord])
 end
 
 ---------------------------------------------------------
@@ -206,11 +303,7 @@ function HLHandler:OnEnter(mapFile, coord)
     else
         tooltip:SetOwner(self, "ANCHOR_RIGHT")
     end
-    local label = get_point_info_by_coord(mapFile, coord)
-    if label then
-        tooltip:SetText(label)
-        tooltip:Show()
-    end
+    handle_tooltip_by_coord(tooltip, mapFile, coord)
 end
 
 local function createWaypoint(button, mapFile, coord)
