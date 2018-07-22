@@ -1,4 +1,4 @@
-## Interface: 70000
+## Interface: 80000
 ## Title: HandyNotes_LostAndFound
 ## Notes: Where the Lost and Found objects are
 ## Author: Kemayo
