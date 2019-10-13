@@ -39,7 +39,7 @@ local GetCurrencyInfo = GetCurrencyInfo
 local points = {
     -- [mapFile] = { [coord] = { type=[type], id=[id], junk=[bool], }, }
     -- [] = { item=, }, -- 
-    ["KunLaiSummit"] = {
+    [379] = { -- Kun Lai Summit
         [52907140] = { item=86394, note="in the cave", quest=31413, }, -- Hozen Warrior Spear
         [35207640] = { item=86125, quest=31304, npc=64227, }, -- Kafa Press
         [73107350] = { label="Sprite's Cloth Chest", note="in the cave", quest=31412, },
@@ -54,19 +54,19 @@ local points = {
         [59405300] = { label="Stolen Sprite Treasure", achievement=7997, note="in the cave", quest=31415, },
         [59247303] = { item=86427, achievement=7997, quest=31422, }, -- Terracotta Head
     },
-    ["KnucklethumpHole"] = { -- cave in Kun-Lai
+    [382] = { -- KnucklethumpHole, cave in Kun-Lai
         [52002750] = { label="Hozen Treasure Cache", achievement=7997, quest=31414, },
     },
-    ["TheDeeper"] = { -- cave in Kun-Lai
+    [383] = { -- TheDeeper, cave in Kun-Lai
         [24106580] = { item=86394, level=12, quest=31413, }, -- Hozen Warrior Spear
     },
-    ["PrankstersHollow"] = { -- cave in Kun-Lai
+    [381] = { -- PrankstersHollow, cave in Kun-Lai
         [54706980] = { label="Sprite's Cloth Chest", quest=31412, },
     },
-    ["HowlingwindCavern"] = { -- cave in Kun-Lai
+    [380] = { -- HowlingwindCavern, cave in Kun-Lai
         [41674412] = { label="Stolen Sprite Treasure", achievement=7997, quest=31415, },
     },
-    ["TownlongWastes"] = {
+    [388] = { -- Townlong Steppes
         [66304470] = { item=86518, quest=31425, }, -- Yaungol Fire Carrier
         [66804800] = { item=86518, quest=31425, }, -- Yaungol Fire Carrier
         [62823405] = { label="Abandoned Crate of Goods", achievement=7997, note="in a tent", quest=31427, },
@@ -75,13 +75,13 @@ local points = {
         [57505850] = { item=86517, achievement=7997, quest=31424, }, -- Hardened Sap of Kri'vess
         [32806160] = { item=86516, achievement=7997, note="in the cave", quest=31423, }, -- Fragment of Dread
     },
-    ["NiuzaoCatacombs"] = { -- cave in Townlong
+    [389] = { -- Niuzao Catacombs, cave in Townlong
         [56406480] = { item=86516, achievement=7997, quest=31423, }, -- Fragment of Dread
         [36908760] = { item=86516, achievement=7997, quest=31423, }, -- Fragment of Dread
         [48408860] = { item=86516, achievement=7997, quest=31423, }, -- Fragment of Dread
         [64502150] = { item=86516, achievement=7997, quest=31423, }, -- Fragment of Dread
     },
-    ["ValleyoftheFourWinds"] = {
+    [376] = { -- Valley of the Four Winds
         [46802460] = { item=85973, npc=64004, quest=31284, }, -- Ancient Pandaren Fishing Charm
         [45403820] = { item=86079, npc=64191, quest=31292, }, -- Ancient Pandaren Woodcutter
         [15402920] = { item=86218, quest=31407, }, -- Staff of the Hidden Master
@@ -94,7 +94,7 @@ local points = {
         [23712833] = { label="Virmen Treasure Cache", achievement=7997, quest=31405, },
         [75105510] = { item=86220, achievement=7997, quest=31408, } -- Saurok Stone Tablet
     },
-    ["DreadWastes"] = {
+    [422] = { -- Dread Wastes
         [66306660] = { item=86522, quest=31433, }, -- Blade of the Prime
         [25905030] = { item=86525, quest=31436, note="in the underwater cave", }, -- Bloodsoaked Chitin Fragment
         [30209080] = { item=86524, quest=31435, }, -- Dissector's Staff of Mutation
@@ -106,17 +106,17 @@ local points = {
         [71803610] = { item=86519, quest=31429, }, -- Wind-Reaver's Dagger of Quick Strikes
         [28804190] = { item=86527, quest=31438, }, -- Blade of the Poisoned Mind
     },
-    ["Krasarang"] = {
+    [418] = { -- Krasarang Wilds
         [42409200] = { item=86122, label="Equipment Locker", quest=31410, }, -- Plankwalking Greaves
         [52308870] = { item=87266, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
         [50804930] = { item=86124, quest=31409, }, -- Pandaren Fishing Spear
         [52007300] = { item=87798, junk=true, quest=31863, }, -- Stack of Papers
         [71000920] = { item=86220, achievement=7997, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
     },
-    ["ValeofEternalBlossoms"] = {
+    [390] = { -- Vale of Eternal Blossoms
         -- nothing?
     },
-    ["TheJadeForest"] = {
+    [371] = { -- The Jade Forest
         [39400730] = { item=85776, note="in the well", quest=31397, }, -- Wodin's Mantid Shaker
         [39264665] = { item=86199, npc=64272, quest=31307, }, -- Jade Infused Blade
         [43001160] = { item=86198, quest=31403, }, -- Hammer of Ten Thunders
@@ -133,18 +133,18 @@ local points = {
         [51229999] = { label="Ship's Locker", achievement=7997, quest=31396, },
         [62452752] = { label="Stash of Gems", junk=true, quest=31866, },
     },
-    ["GreenstoneQuarry"] = { -- cave in Jade Forest
-        [33107800] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
-        [44007050] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
-        [43703850] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
-        [38704750] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
-        [32606270] = { item=85777, level=7, quest=31399, }, -- Ancient Pandaren Mining Pick
+    [373] = { -- Greenstone Quarry, cave in Jade Forest
+        [33107800] = { item=85777, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [44007050] = { item=85777, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [43703850] = { item=85777, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [38704750] = { item=85777, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [32606270] = { item=85777, quest=31399, }, -- Ancient Pandaren Mining Pick
     },
-    ["TheHiddenPass"] = {
+    [433] = { -- Veiled Stair, TheHiddenPass
         [74937648] = { item=86473, achievement=7997, quest=31428, }, -- The Hammer of Folly
         [55107200] = { label="Forgotten Lockbox", junk=true, quest=31867, },
     },
-    ["TimelessIsle"] = {
+    [554] = { -- Timeless Isle
         -- [] = { label="", quest=, },
     },
 }
@@ -250,9 +250,8 @@ local get_point_info = function(point)
         return label, icon, category, point.quest
     end
 end
-local get_point_info_by_coord = function(mapFile, coord)
-    mapFile = string.gsub(mapFile, "_terrain%d+$", "")
-    return get_point_info(points[mapFile] and points[mapFile][coord])
+local get_point_info_by_coord = function(uiMapId, coord)
+    return get_point_info(points[uiMapId] and points[uiMapId][coord])
 end
 
 local function handle_tooltip(tooltip, point)
@@ -285,9 +284,8 @@ local function handle_tooltip(tooltip, point)
     end
     tooltip:Show()
 end
-local handle_tooltip_by_coord = function(tooltip, mapFile, coord)
-    mapFile = string.gsub(mapFile, "_terrain%d+$", "")
-    return handle_tooltip(tooltip, points[mapFile] and points[mapFile][coord])
+local handle_tooltip_by_coord = function(tooltip, uiMapId, coord)
+    return handle_tooltip(tooltip, points[uiMapId] and points[uiMapId][coord])
 end
 
 ---------------------------------------------------------
@@ -295,22 +293,21 @@ end
 local HLHandler = {}
 local info = {}
 
-function HLHandler:OnEnter(mapFile, coord)
+function HLHandler:OnEnter(uiMapId, coord)
     local tooltip = GameTooltip
     if ( self:GetCenter() > UIParent:GetCenter() ) then -- compare X coordinate
         tooltip:SetOwner(self, "ANCHOR_LEFT")
     else
         tooltip:SetOwner(self, "ANCHOR_RIGHT")
     end
-    handle_tooltip_by_coord(tooltip, mapFile, coord)
+    handle_tooltip_by_coord(tooltip, uiMapId, coord)
 end
 
-local function createWaypoint(button, mapFile, coord)
+local function createWaypoint(button, uiMapId, coord)
     if TomTom then
-        local mapId = HandyNotes:GetMapFiletoMapID(mapFile)
         local x, y = HandyNotes:getXY(coord)
-        TomTom:AddWaypoint(mapId, x, y, {
-            title = get_point_info_by_coord(mapFile, coord),
+        TomTom:AddWaypoint(uiMapId, x, y, {
+            title = get_point_info_by_coord(uiMapId, coord),
             persistent = nil,
             minimap = true,
             world = true
@@ -356,62 +353,56 @@ do
     HL_Dropdown.displayMode = "MENU"
     HL_Dropdown.initialize = generateMenu
 
-    function HLHandler:OnClick(button, down, mapFile, coord)
+    function HLHandler:OnClick(button, down, uiMapId, coord)
         if button == "RightButton" and not down then
-            currentZone = string.gsub(mapFile, "_terrain%d+$", "")
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         end
     end
 end
 
-function HLHandler:OnLeave(mapFile, coord)
+function HLHandler:OnLeave(uiMapId, coord)
     GameTooltip:Hide()
 end
 
 do
     -- This is a custom iterator we use to iterate over every node in a given zone
-    local currentLevel
     local function iter(t, prestate)
         if not t then return nil end
         local state, value = next(t, prestate)
         while state do -- Have we reached the end of this zone?
             if value then
-                if not value.level or value.level == currentLevel then
-                    local label, icon, category, quest = get_point_info(value)
-                    -- Debug("iter step", state, icon, db.icon_scale, db.icon_alpha, category, quest)
-                    if quest == 31865 then
-                        Debug(label, category, quest)
-                        Debug("SETTINGS", db.show_junk, db.show_riches, db.show_lost, db.found)
-                        Debug("TEST",
-                            (category ~= "junk" or db.show_junk),
-                            (category ~= "riches" or db.show_riches),
-                            (category ~= "lost" or db.show_lost),
-                            (db.found or not (quest and IsQuestFlaggedCompleted(quest))),
-                            (category ~= "junk" or db.show_junk)
-                                and (category ~= "riches" or db.show_riches)
-                                and (category ~= "lost" or db.show_lost)
-                                and (db.found or not (quest and IsQuestFlaggedCompleted(quest)))
-                        )
-                    end
-                    if (
+                local label, icon, category, quest = get_point_info(value)
+                -- Debug("iter step", state, icon, db.icon_scale, db.icon_alpha, category, quest)
+                if quest == 31865 then
+                    Debug(label, category, quest)
+                    Debug("SETTINGS", db.show_junk, db.show_riches, db.show_lost, db.found)
+                    Debug("TEST",
+                        (category ~= "junk" or db.show_junk),
+                        (category ~= "riches" or db.show_riches),
+                        (category ~= "lost" or db.show_lost),
+                        (db.found or not (quest and IsQuestFlaggedCompleted(quest))),
                         (category ~= "junk" or db.show_junk)
-                        and (category ~= "riches" or db.show_riches)
-                        and (category ~= "lost" or db.show_lost)
-                        and (db.found or not (quest and IsQuestFlaggedCompleted(quest)))
-                    ) then
-                        return state, nil, icon, db.icon_scale, db.icon_alpha
-                    end
+                            and (category ~= "riches" or db.show_riches)
+                            and (category ~= "lost" or db.show_lost)
+                            and (db.found or not (quest and IsQuestFlaggedCompleted(quest)))
+                    )
+                end
+                if (
+                    (category ~= "junk" or db.show_junk)
+                    and (category ~= "riches" or db.show_riches)
+                    and (category ~= "lost" or db.show_lost)
+                    and (db.found or not (quest and IsQuestFlaggedCompleted(quest)))
+                ) then
+                    return state, nil, icon, db.icon_scale, db.icon_alpha
                 end
             end
             state, value = next(t, state) -- Get next data
         end
         return nil, nil, nil, nil
     end
-    function HLHandler:GetNodes(mapFile, minimap, level)
-        currentLevel = level
-        mapFile = string.gsub(mapFile, "_terrain%d+$", "")
-        return iter, points[mapFile], nil
+    function HLHandler:GetNodes2(uiMapId, minimap)
+        return iter, points[uiMapId], nil
     end
 end
 
