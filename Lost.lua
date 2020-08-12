@@ -139,6 +139,7 @@ local points = {
         [43703850] = { item=85777, quest=31399, }, -- Ancient Pandaren Mining Pick
         [38704750] = { item=85777, quest=31399, }, -- Ancient Pandaren Mining Pick
         [32606270] = { item=85777, quest=31399, }, -- Ancient Pandaren Mining Pick
+        [38231394] = { item=85777, quest=31399, }, -- Ancient Pandaren Mining Pick
     },
     [433] = { -- Veiled Stair, TheHiddenPass
         [74937648] = { item=86473, achievement=7997, quest=31428, }, -- The Hammer of Folly
