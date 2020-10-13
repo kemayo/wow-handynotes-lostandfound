@@ -31,7 +31,6 @@ local HandyNotes = HandyNotes
 local GetItemInfo = GetItemInfo
 local GetAchievementInfo = GetAchievementInfo
 local GetAchievementCriteriaInfo = GetAchievementCriteriaInfo
-local GetCurrencyInfo = GetCurrencyInfo
 
 ---------------------------------------------------------
 -- Constants
@@ -201,23 +200,11 @@ local function work_out_label(point)
         end
         fallback = 'npc:'..point.npc
     end
-    if point.currency then
-        local name, _, texture = GetCurrencyInfo(point.currency)
-        if name then
-            return name
-        end
-    end
     return UNKNOWN
 end
 local function work_out_texture(point)
     if point.item and db.icon_item then
         local texture = select(10, GetItemInfo(point.item))
-        if texture then
-            return trimmed_icon(texture)
-        end
-    end
-    if point.currency then
-        local texture = select(3, GetCurrencyInfo(point.currency))
         if texture then
             return trimmed_icon(texture)
         end
@@ -268,10 +255,6 @@ local function handle_tooltip(tooltip, point)
 
         if point.item and point.npc then
             tooltip:AddDoubleLine(CREATURE, mob_name(point.npc) or point.npc)
-        end
-        if point.currency then
-            local name = GetCurrencyInfo(point.currency)
-            tooltip:AddDoubleLine(CURRENCY, name or point.currency)
         end
         if point.achievement then
             local _, name = GetAchievementInfo(point.achievement)
@@ -382,18 +365,18 @@ do
                         (category ~= "junk" or db.show_junk),
                         (category ~= "riches" or db.show_riches),
                         (category ~= "lost" or db.show_lost),
-                        (db.found or not (quest and IsQuestFlaggedCompleted(quest))),
+                        (db.found or not (quest and C_QuestLog.IsQuestFlaggedCompleted(quest))),
                         (category ~= "junk" or db.show_junk)
                             and (category ~= "riches" or db.show_riches)
                             and (category ~= "lost" or db.show_lost)
-                            and (db.found or not (quest and IsQuestFlaggedCompleted(quest)))
+                            and (db.found or not (quest and C_QuestLog.IsQuestFlaggedCompleted(quest)))
                     )
                 end
                 if (
                     (category ~= "junk" or db.show_junk)
                     and (category ~= "riches" or db.show_riches)
                     and (category ~= "lost" or db.show_lost)
-                    and (db.found or not (quest and IsQuestFlaggedCompleted(quest)))
+                    and (db.found or not (quest and C_QuestLog.IsQuestFlaggedCompleted(quest)))
                 ) then
                     return state, nil, icon, db.icon_scale, db.icon_alpha
                 end

@@ -1,6 +1,6 @@
-## Interface: 80205
+## Interface: 90001
 ## Title: HandyNotes_LostAndFound
-## Notes: Where the Lost and Found objects are
+## Notes: Where the Lost and Found objects are in Pandaria
 ## Author: Kemayo
 ## Version: 1
 ## DefaultState: enabled
