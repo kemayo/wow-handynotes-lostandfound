@@ -37,7 +37,7 @@ local GetAchievementCriteriaInfo = GetAchievementCriteriaInfo
 
 local points = {
     -- [mapFile] = { [coord] = { type=[type], id=[id], junk=[bool], }, }
-    -- [] = { item=, }, -- 
+    -- [] = { item=, }, --
     [379] = { -- Kun Lai Summit
         [52907140] = { item=86394, note="in the cave", quest=31413, }, -- Hozen Warrior Spear
         [35207640] = { item=86125, quest=31304, npc=64227, }, -- Kafa Press
@@ -106,10 +106,10 @@ local points = {
         [28804190] = { item=86527, quest=31438, }, -- Blade of the Poisoned Mind
     },
     [418] = { -- Krasarang Wilds
-        [42409200] = { item=86122, label="Equipment Locker", quest=31410, }, -- Plankwalking Greaves
-        [52308870] = { item=87266, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
-        [50804930] = { item=86124, quest=31409, }, -- Pandaren Fishing Spear
-        [52007300] = { item=87798, junk=true, quest=31863, }, -- Stack of Papers
+        [43669232] = { item=86122, label="Equipment Locker", quest=31410, }, -- Plankwalking Greaves
+        [54488873] = { item=87266, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
+        [52814644] = { item=86124, quest=31409, }, -- Pandaren Fishing Spear
+        [54267232] = { item=87798, junk=true, quest=31863, }, -- Stack of Papers
         [71000920] = { item=86220, achievement=7997, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
     },
     [390] = { -- Vale of Eternal Blossoms
@@ -339,6 +339,7 @@ do
 
     function HLHandler:OnClick(button, down, uiMapId, coord)
         if button == "RightButton" and not down then
+            currentZone = uiMapId
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         end
