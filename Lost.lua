@@ -339,6 +339,7 @@ do
 
     function HLHandler:OnClick(button, down, uiMapId, coord)
         if button == "RightButton" and not down then
+            currentZone = uiMapId
             currentCoord = coord
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         end
