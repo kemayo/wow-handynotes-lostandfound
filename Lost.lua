@@ -82,7 +82,7 @@ local points = {
     },
     [376] = { -- Valley of the Four Winds
         [46802460] = { item=85973, npc=64004, quest=31284, }, -- Ancient Pandaren Fishing Charm
-        [45403820] = { item=86079, npc=64191, quest=31292, }, -- Ancient Pandaren Woodcutter
+        [45403820] = { item=86079, npc=64191, quest=31292, }, -- Ancient Pandaren Craftsman
         [15402920] = { item=86218, quest=31407, }, -- Staff of the Hidden Master
         [14903360] = { item=86218, quest=31407, }, -- Staff of the Hidden Master
         [17503570] = { item=86218, quest=31407, }, -- Staff of the Hidden Master
