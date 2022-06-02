@@ -1,0 +1,27 @@
+## Interface: 90205
+## Title: HandyNotes: Mists of Pandaria (Treasures and Rares)
+## Notes: Where everything is in Pandaria
+## Author: Kemayo
+## Version: @project-version@
+## DefaultState: enabled
+## X-Category: Map
+## X-eMail: kemayo @ gmail DOT com
+## X-Curse-Project-ID: 45644
+## X-Wago-ID: RBKp1vGE
+## SavedVariables: HandyNotes_MistsOfPandariaTreasuresDB
+## RequiredDeps: HandyNotes
+
+handler\handler.xml
+
+pandaria.lua
+
+zones\DreadWastes.lua
+zones\IsleOfThunder.lua
+zones\JadeForest.lua
+zones\KrasarangWilds.lua
+zones\KunLaiSummit.lua
+zones\TimelessIsle.lua
+zones\TownlongSteppes.lua
+zones\ValeOfEternalBlossoms.lua
+zones\ValleyOfTheFourWinds.lua
+zones\VeiledStair.lua

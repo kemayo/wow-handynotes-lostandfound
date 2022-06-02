@@ -1,10 +1,8 @@
-# HandyNotes: Lost and Found (Pandaria Treasures)
+# HandyNotes: Mists of Pandaria (Treasures and Rares)
 
-A HandyNotes plugin to show the Lost and Found items on your map.
+A HandyNotes plugin to show the various treasures and rares of Pandaria on your map.
 
 They're rare spawns, so they're not guaranteed to be there... but at least you'll know where to look.
-
-Also includes a number of items which don't qualify for the achievement, but are still nice to find.
 
 Items that you've already collected won't be displayed. (This uses the "flag" quests that the game relies on to keep track of the items. Sometimes these glitch; generally if they do so, you also won't have gotten achievement-credit, so you'll likely still be interested in the item.)
 
