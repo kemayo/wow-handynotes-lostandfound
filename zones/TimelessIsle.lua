@@ -38,6 +38,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
     label="{achievement:8729.1:Moss-Covered Chests}",
     achievement=8729, -- Treasure, Treasure Everywhere
     criteria=1,
+    minimap=true,
 })
 ns.RegisterPoints(554, { -- Timeless Isle
     -- Skull-covered
@@ -61,6 +62,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
     [54007820] = {quest=33209, criteria=5,}, -- at the central cauldron of Firewalker Ruins
 }, {
     achievement=8729, -- Treasure, Treasure Everywhere
+    minimap=true,
 })
 ns.RegisterPoints(555, { -- Cavern of Lost Spirits
     -- Skull-covered
@@ -69,6 +71,7 @@ ns.RegisterPoints(555, { -- Cavern of Lost Spirits
         achievement=8729, -- Treasure, Treasure Everywhere
         criteria=2,
         note="Inside the cave",
+        minimap=true,
     },
 })
 
