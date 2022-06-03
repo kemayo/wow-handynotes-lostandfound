@@ -72,6 +72,54 @@ ns.RegisterPoints(555, { -- Cavern of Lost Spirits
     },
 })
 
+-- Extreme Treasure Hunter
+ns.RegisterPoints(554, { -- Timeless Isle
+    [49706940] = { -- Gleaming Treasure Chest
+        quest=32969,
+        criteria=24018,
+    },
+    [54004720] = { -- Rope-Bound Treasure Chest
+        quest=32968,
+        criteria=24019,
+        note="Run along the ropes",
+        path=60204590,
+    },
+    [58706010] = { -- Mist-Covered Treasure Chest
+        quest=32971,
+        criteria=24020,
+        note="Use the statue and loot a chest while falling",
+    },
+}, {
+    achievement=8726,
+    atlas="VignetteLootElite", scale=1.1,
+})
+
+-- Where There's Pirates There's Booty
+ns.RegisterPoints(554, { -- Timeless Isle
+    [40009200] = { -- Sunken Treasure
+        quest=32957,
+        criteria=24021,
+        loot={
+            {134024, toy=true}, -- Cursed Swabby Helmet
+        },
+        note="Key drops from nearby elites",
+    },
+    [17205730] = { -- Blackguard's Jetsam
+        quest=32956,
+        criteria=24022,
+        note="In an underwater cave",
+        minimap=true, -- entrance is a long way from the vignette
+    },
+    [71308000] = { -- Gleaming Treasure Satchel
+        quest=32970,
+        criteria=24023,
+        note="Hanging from a pole on the ship",
+    },
+}, {
+    achievement=8727,
+    atlas="VignetteLootElite", scale=1.1,
+})
+
 -- Rares
 
 local archiereus = { -- Archiereus of Flame +4
