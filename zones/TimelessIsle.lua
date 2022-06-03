@@ -120,6 +120,36 @@ ns.RegisterPoints(554, { -- Timeless Isle
     atlas="VignetteLootElite", scale=1.1,
 })
 
+-- Legend of the Past
+ns.RegisterPoints(554, { -- Timeless Isle
+    [47308080] = {}, --- South side of the ramp that leads up to Firewalker Ruins.
+    [55305030] = {}, --- Under the broken bridge, in front of the Mysterious Den.
+    [63104530] = {}, --- On a ledge to the west of the pathway in the Blazing Way area.
+    [55605930] = {}, --- On the top of the hill-spike that connects the upmost pair of Ordon bridges.
+    [50407170] = {}, --- On the stoned area east of the Everlasting Spritewood.
+    [68406040] = {}, --- Near the ruined tower on the east as you pass through the bridge from Firewalker Ruins.
+    [42805540] = {}, --- Next to Emperor Shaohao's tribune.
+    [48005120] = {}, --- On a rock, north side of Mossgreen Lake.
+    [25007190] = {}, --- Next to the Alliance camp graveyard.
+    [64507230] = {}, --- On a stump in Croaking Hollow.
+    [55107290] = {}, --- On the northern slump scraps @ Firewalker Ruins.
+    [33805450] = {}, --- At the entrance of Celestial Court (arena).
+    [37704110] = {}, --- On a small rock halfway between the Celestial Court and 3-Breeze Terrace.
+    [39607780] = {}, --- Next to the broken shrine at Pi'jiu village.
+    [65405170] = {}, --- On a rock next to the daily quest giver Senior Historian Evelyna.
+    [52206260] = {}, --- Southeast of Mossgreen Lake.
+    [32006150] = {}, --- Southwest of Celestial Court.
+    [32603280] = {}, --- On a rock at the west side of 3-Breeze Terrace.
+    [22403870] = {}, --- Next to the Horde camp graveyard.
+}, {
+    label="{achievement:8723}",
+    achievement=8723,
+    criteria=true,
+    atlas="mechagon-projects",
+    always=true,
+    minimap=true,
+})
+
 -- Rares
 
 local archiereus = { -- Archiereus of Flame +4
