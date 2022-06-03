@@ -155,8 +155,11 @@ ns.RegisterPoints(554, { -- Timeless Isle
 
 -- Rares
 
+-- Note: most of these rares have two questids; a "first" that triggers
+-- once-per-character, and a daily. Daily only triggers on your second kill.
+
 local archiereus = { -- Archiereus of Flame +4
-    quest=33312,
+    quest=33312, -- first:33288
     criteria=31, -- API says 0 for its ID, maybe because of the two npc ids?
     npc=73174,
     loot={
@@ -164,7 +167,7 @@ local archiereus = { -- Archiereus of Flame +4
     },
 }
 local flintlord = { -- Flintlord Gairan +4
-    quest=33309,
+    quest=33309, -- first:33285
     criteria=23995,
     npc=73172,
     loot={
@@ -177,7 +180,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
     [56603570] = archiereus,
     [58202490] = archiereus,
     [35003130] = { -- Archiereus of Flame
-        quest={33312, 33343},
+        quest={33312, 33343}, -- first:33288
         criteria=31, -- API says 0 for its ID, maybe because of the two npc ids?
         npc=73666,
         loot={
@@ -186,7 +189,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         note="Summoned for {quest:33343}",
     },
     [63737281] = { -- Bufo
-        quest=33301,
+        quest=33301, -- first: 33276
         criteria=23986,
         npc=72775,
         loot={
@@ -194,7 +197,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [60005100] = { -- Champion of the Black Flame
-        quest=33299,
+        quest=33299, -- first: 33274
         criteria=23996,
         npc=73171,
         loot={
@@ -212,7 +215,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [54005240] = { -- Cinderfall
-        quest=33310,
+        quest=33310, -- first:33286
         criteria=23981,
         npc=73175,
         loot={
@@ -254,7 +257,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
     [48803700] = flintlord,
     [55203800] = flintlord,
     [64202860] = { -- Garnia
-        quest=33300,
+        quest=33300, -- first: 33275
         criteria=23982,
         npc=73282,
         loot={
@@ -262,7 +265,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [61606340] = { -- Golganarr
-        quest=33315,
+        quest=33315, -- first: 33291
         criteria=23988,
         npc=72970,
         loot={
@@ -271,7 +274,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [40208280] = { -- Gu'chi the Swarmbringer +5
-        quest=33260,
+        quest=33294, -- first: 33260
         criteria=23970,
         npc=72909,
         loot={
@@ -282,7 +285,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         note="Patrols counterclockwise around the village",
     },
     [65505730] = { -- Huolon
-        quest=33311,
+        quest=33311, -- first: 33287
         criteria=23984,
         npc=73167,
         loot={
@@ -292,7 +295,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         routes={{65505730,71805100,74004500,64404060,60304490,58005840}},
     },
     [52408240] = { -- Jakur of Ordon
-        quest=33306,
+        quest=33306, -- first: 33281
         criteria=23994,
         npc=73169,
         loot={
@@ -301,7 +304,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [33608540] = { -- Karkanos
-        quest=33292,
+        quest=33292, -- first: 33258
         criteria=23973,
         npc=72193,
         loot={
@@ -309,7 +312,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [67404380] = { -- Leafmender
-        quest=33298,
+        quest=33298, -- first: 33273
         criteria=23979,
         npc=73277,
         loot={
@@ -327,7 +330,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [44003920] = { -- Rock Moss
-        quest=33307,
+        quest=33307, -- first: 33283
         criteria=23980,
         npc=73157,
         loot={
@@ -346,7 +349,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         note="Use a {achievement:8723:Legend of the Past} tool to break in",
     },
     [44003720] = { -- Spirit of Jadefire
-        quest=33293,
+        quest=33293, -- first: 33259
         criteria=23978,
         npc=72769,
         loot={
@@ -356,13 +359,13 @@ ns.RegisterPoints(554, { -- Timeless Isle
         note="Inside the cave",
     },
     [71208220] = { -- Stinkbraid
-        quest=33305,
+        quest=33305, -- first: 33280
         criteria=24144,
         npc=73704,
         loot={6657}, -- Savory Deviate Delight
     },
     [54004220] = { -- Tsavo'ka
-        quest=33304,
+        quest=33304, -- first: 33279
         criteria=23983,
         npc=72808,
         loot={
@@ -370,7 +373,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [43202660] = { -- Urdur the Cauterizer
-        quest=33308,
+        quest=33308, -- first: 33284
         criteria=23993,
         npc=73173,
         loot={
@@ -379,7 +382,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [57207640] = { -- Watcher Osu
-        quest=33322,
+        quest=33322, -- first: 33321
         criteria=23992,
         npc=73170,
         loot={
@@ -388,7 +391,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [47008740] = { -- Zesqua
-        quest=33316,
+        quest=33316, -- first: 32997
         criteria=23971,
         npc=72245,
         loot={
@@ -397,7 +400,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [37207700] = { -- Zhu-Gon the Sour
-        quest=33317,
+        quest=32959, --first: 33317
         criteria=23972,
         npc=71919,
         loot={
@@ -409,7 +412,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
 })
 ns.RegisterPoints(554, { -- Timeless Isle
     [30805060] = { -- Emerald Gander +11
-        quest=33261,
+        quest=33295, -- first: 33261
         criteria=23967,
         npc=73158,
         loot={
@@ -418,7 +421,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         note="Rare spawn of {npc:72762:Brilliant Windfeather}",
     },
     [23604980] = { -- Great Turtle Furyshell +6
-        quest=33297,
+        quest=33297, -- first: 33272
         criteria=23969,
         npc=73161,
         loot={
@@ -427,7 +430,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         note="Rare spawn of {npc:72764:Great Turtle}",
     },
     [29206320] = { -- Imperial Python +10
-        quest=33303,
+        quest=33303, -- first: 33278
         criteria=23989,
         npc=73163,
         loot={
@@ -437,13 +440,13 @@ ns.RegisterPoints(554, { -- Timeless Isle
         note="Rare spawn of {npc:72841:Death Adder}",
     },
     [31805840] = { -- Ironfur Steelhorn +9
-        quest=33296,
+        quest=33296, -- first: 33270
         criteria=23968,
         npc=73160,
         note="Rare spawn of {npc:72844:Ironfur Great Bull}",
     },
     [18805460] = { -- Monstrous Spineclaw +14
-        quest=nil,
+        quest=33302, -- first: 33277
         criteria=23985,
         npc=73166,
         loot={
@@ -458,7 +461,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
 })
 ns.RegisterPoints(555, { -- Cavern of Lost Spirits
     [43003180] = { -- Rock Moss
-        quest=33307,
+        quest=33307, -- first: 33283
         criteria=23980,
         npc=73157,
         loot={
@@ -466,7 +469,7 @@ ns.RegisterPoints(555, { -- Cavern of Lost Spirits
         },
     },
     [47806180] = { -- Spirit of Jadefire +7
-        quest=33293,
+        quest=33293, -- first: 33259
         npc=72769,
         loot={
             {104307, pet=1348,}, -- Jadefire Spirit
