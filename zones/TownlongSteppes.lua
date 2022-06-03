@@ -19,3 +19,102 @@ ns.RegisterPoints(389, { -- Niuzao Catacombs, cave in Townlong
     [48408860] = { loot={86516}, quest=31423, }, -- Fragment of Dread
     [64502150] = { loot={86516}, quest=31423, }, -- Fragment of Dread
 }, ns.riches{})
+
+-- Rares
+
+ns.RegisterPoints(388, { -- Townlong Steppes
+    [65408740] = { -- Eshelon
+        quest=nil,
+        criteria=21059,
+        npc=50772,
+        loot={
+            87222, -- Big Bag of Linens
+        },
+    },
+    [62803540] = { -- Kah'tir
+        quest=nil,
+        criteria=21080,
+        npc=50355,
+    },
+    [41807860] = { -- Lith'ik the Stalker +2
+        quest=nil,
+        criteria=21066,
+        npc=50734,
+        loot={
+            87221, -- Big Bag of Jewels
+        },
+    },
+    [64004940] = { -- Lon the Bull
+        quest=nil,
+        criteria=21101,
+        npc=50333,
+    },
+    [53806340] = { -- Norlaxx
+        quest=nil,
+        criteria=21073,
+        npc=50344,
+        loot={
+            87220, -- Big Bag of Mysteries
+        },
+    },
+    [59208540] = { -- Siltriss the Sharpener
+        quest=nil,
+        criteria=21094,
+        npc=50791,
+    },
+    [67607420] = { -- The Yowler
+        quest=nil,
+        criteria=21052,
+        npc=50832,
+        loot={
+            87225, -- Big Bag of Food
+        },
+    },
+    [32006180] = { -- Yul Wildpaw
+        quest=nil,
+        criteria=21087,
+        npc=50820,
+        loot={
+            87224, -- Big Bag of Wonders
+        },
+    },
+}, {
+    achievement=7439, -- Glorious!
+})
+ns.RegisterPoints(388, { -- Townlong Steppes
+    [36408540] = { -- Zandalari Warbringer
+        quest=nil,
+        npc=69841, -- also 69769, 69842
+        loot={
+            {94230,mount=534,}, -- Reins of the Amber Primordial Direhorn
+            {94229,mount=535,}, -- Reins of the Slate Primordial Direhorn
+            {94231,mount=536,}, -- Reins of the Jade Primordial Direhorn
+        },
+        atlas="VignetteKillElite", scale=1.2,
+    },
+    [48808460] = { -- Zandalari Warscout +4
+        quest=nil,
+        npc=69768,
+        loot={
+            94159, -- Small Bag of Zandalari Supplies
+            94158, -- Big Bag of Zandalari Supplies
+        },
+        routes={
+            {48808460, 46808960, 43609080, 40808980, 37008480, 40008040, 40407740, 44207480, 47407440, 49407320},
+        },
+    },
+    [35205120] = { -- Krakkanon
+        quest=nil,
+        npc=70323,
+        loot={
+            88563, -- Nat's Fishing Journal
+        },
+    },
+    [37205760] = { -- Huggalon the Heart Watcher
+        quest=nil,
+        npc=66900,
+        loot={
+            {90067,toy=true,}, -- B. F. F. Necklace
+        },
+    },
+})

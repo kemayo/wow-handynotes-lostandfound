@@ -14,3 +14,89 @@ ns.RegisterPoints(422, { -- Dread Wastes
 }, {
 	achievement=7284, -- Is Another Man's Treasure
 })
+
+-- Rares
+
+ns.RegisterPoints(422, { -- Dread Wastes
+    [34802300] = { -- Ai-Li Skymirror
+        quest=nil,
+        criteria=21088,
+        npc=50821,
+        loot={
+            {86589,toy=true,}, -- Ai-Li's Skymirror
+        },
+    },
+    [25002860] = { -- Dak the Breaker
+        quest=nil,
+        criteria=21102,
+        npc=50334,
+    },
+    [35603060] = { -- Gar'lok +2
+        quest=nil,
+        criteria=21067,
+        npc=50739,
+        loot={
+            {86578,toy=true,}, -- Eternal Warrior's Sigil
+        },
+    },
+    [55206380] = { -- Ik-Ik the Nimble
+        quest=nil,
+        criteria=21053,
+        npc=50836,
+        loot={
+            {86593,toy=true,}, -- Hozen Beach Ball
+        },
+    },
+    [71803740] = { -- Karr the Darkener
+        quest=nil,
+        criteria=21074,
+        npc=50347,
+        loot={
+            {86564,pet=834,}, -- Imbued Jade Fragment
+        },
+    },
+    [73002220] = { -- Krol the Blade
+        quest=nil,
+        criteria=21081,
+        npc=50356,
+    },
+    [64005860] = { -- Nalash Verdantis
+        quest=nil,
+        criteria=21060,
+        npc=50776,
+        loot={
+            {86563,pet=836,}, -- Hollow Reed
+        },
+    },
+    [36006260] = { -- Omnis Grinlok
+        quest=nil,
+        criteria=21095,
+        npc=50805,
+    },
+}, {
+    achievement=7439, -- Glorious!
+})
+
+ns.RegisterPoints(422, { -- Dread Wastes
+    [47206140] = { -- Zandalari Warbringer
+        quest=nil,
+        npc=69841, -- also 69769, 69842
+        loot={
+            {94230,mount=534,}, -- Reins of the Amber Primordial Direhorn
+            {94229,mount=535,}, -- Reins of the Slate Primordial Direhorn
+            {94231,mount=536,}, -- Reins of the Jade Primordial Direhorn
+        },
+        atlas="VignetteKillElite", scale=1.2,
+    },
+    [37004820] = { -- Zandalari Warscout +4
+        quest=nil,
+        npc=69768,
+        loot={
+            94159, -- Small Bag of Zandalari Supplies
+            94158, -- Big Bag of Zandalari Supplies
+        },
+        routes={
+            {57606600, 53606660, 50006480, 48406100, 47006080, 45405600, 43005160, 37004820},
+        },
+    },
+})

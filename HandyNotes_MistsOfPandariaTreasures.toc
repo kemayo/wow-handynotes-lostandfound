@@ -18,6 +18,7 @@ pandaria.lua
 achievements\Lorewalkers.lua
 
 zones\DreadWastes.lua
+zones\IsleOfGiants.lua
 zones\IsleOfThunder.lua
 zones\JadeForest.lua
 zones\KrasarangWilds.lua

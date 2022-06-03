@@ -21,3 +21,86 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
 ns.RegisterPoints(376, { -- Valley of the Four Winds
 	[92003900] = { loot={87524}, group="junk", quest=31869, }, -- Boat-Building Instructions
 })
+
+-- Rares
+
+ns.RegisterPoints(376, { -- Valley of the Four Winds
+    [32806240] = { -- Blackhoof +2
+        quest=nil,
+        criteria=21098,
+        npc=51059,
+        loot={
+            {86565, toy=true}, -- Battle Horn
+        }
+    },
+    [13803860] = { -- Bonobos +2
+        quest=nil,
+        criteria=21049,
+        npc=50828,
+        loot={
+            86591, -- Magic Banana
+        },
+    },
+    [18407740] = { -- Jonn-Dar
+        quest=nil,
+        criteria=21077,
+        npc=50351,
+        loot={
+            86572, -- Terracotta Fragment
+        },
+    },
+    [8005920] = { -- Nal'lak the Ripper +2
+        quest=nil,
+        criteria=21063,
+        npc=50364,
+        loot={
+            86576, -- Dynasty of Steel
+        },
+    },
+    [88401800] = { -- Nasra Spothide
+        quest=nil,
+        criteria=21084,
+        npc=50811,
+        loot={
+            86587, -- Seed of Tranquil Growth
+        },
+    },
+    [67405940] = { -- Salyin Warscout +3
+        quest=nil,
+        criteria=21091,
+        npc=50783,
+        loot={
+            {86583, toy=true,}, -- Salyin Battle Banner
+        },
+    },
+    [52402820] = { -- Sele'na +3
+        quest=nil,
+        criteria=21056,
+        npc=50766,
+    },
+    [36802540] = { -- Sulik'shor
+        quest=nil,
+        criteria=21070,
+        npc=50339,
+    },
+}, {
+    achievement=7439, -- Glorious!
+})
+
+ns.RegisterPoints(376, { -- Valley of the Four Winds
+    -- [71616441] = { -- Chief Salyis
+    --     quest=32098,
+    --     npc=62352,
+    --     loot={
+    --         {89783,mount=515,}, -- Son of Galleon's Saddle
+    --     },
+    -- },
+    [69706190] = { -- Galleon (actually 71606440 but)
+        quest=32098,
+        npc=62346,
+        loot={
+            {89783, mount=515,}, -- Son of Galleon's Saddle
+        },
+        atlas="VignetteKillElite", scale=1.2,
+    },
+})
