@@ -1,5 +1,77 @@
 local myname, ns = ...
 
+-- Treasure, Treasure Everywhere
+-- https://www.wowhead.com/achievement=8729/treasure-treasure-everywhere#comments:id=1884527
+
+ns.RegisterPoints(554, { -- Timeless Isle
+    -- Moss-covered
+    [36703410] = {quest=33170}, -- Three-Breeze Terrace
+    [25502720] = {quest=33171}, -- Misty Strand
+    [27403910] = {quest=33172}, -- south of Misty Strand
+    [30703650] = {quest=33173}, -- on a stump, SW of 3-Breeze Terrace
+    [22403540] = {quest=33174}, -- underwater, north of Horde base
+    [22104930] = {quest=33175}, -- south of Horde base
+    [24805300] = {quest=33176}, -- SE of chest #005
+    [25704580] = {quest=33177}, -- SE of Horde base
+    [22266811] = {quest=33178}, -- north of Alliance base
+    [26806870] = {quest=33179}, -- NE of Alliance base
+    [31007630] = {quest=33180}, -- bush between Alli base and Old Pi'jiu
+    [35307640] = {quest=33181}, -- Old Pi'jiu, W building
+    [38707160] = {quest=33182}, -- Old Pi'jiu, N building
+    [39807950] = {quest=33183}, -- Old Pi'jiu, E building
+    [34808420] = {quest=33184}, -- at the basement of Old Pi'jiu's jetty
+    [43608410] = {quest=33185}, -- bush SE of Old Pi'jiu
+    [47005370] = {quest=33186}, -- in the central lake
+    [46704670] = {quest=33187}, -- north of central lake
+    [51204570] = {quest=33188}, -- in the slump scraps under the broken bridge
+    [55504430] = {quest=33189}, -- next to Tsavo'ka's cave
+    [58005070] = {quest=33190}, -- next to Mysterious Cave
+    [65704780] = {quest=33191}, -- behind the graveyard
+    [63805920] = {quest=33192}, -- south of graveyard
+    [64907560] = {quest=33193}, -- in the Croaking Hollow
+    [60206600] = {quest=33194}, -- SW of chest #022
+    [49706570] = {quest=33195}, -- south of central lake
+    [53107080] = {quest=33196}, -- SE of chest #025
+    [52706270] = {quest=33197}, -- SE of central lake
+    [61708850] = {quest=33227}, -- in the shipwreck of Cpt. Zvezdan
+}, {
+    label="{achievement:8729.1:Moss-Covered Chests}",
+    achievement=8729, -- Treasure, Treasure Everywhere
+    criteria=1,
+})
+ns.RegisterPoints(554, { -- Timeless Isle
+    -- Skull-covered
+    [44703840] = {
+        quest=33203,
+        criteria=2,
+        note="Inside the cave",
+    },
+    -- Blazing
+    [47602760] = {
+        quest=33210,
+        criteria=3,
+    },
+    -- Sturdy
+    [28203520] = {quest=33204, criteria=4, note="Use a {npc:73531:Highwind Albatross} to reach here",}, -- on the top of the cliff, north of Horde base
+    [26806490] = {quest=33205, criteria=4, note="Use a {npc:73531:Highwind Albatross} to reach here",}, -- on the top of the cliff, north of Alliance base
+    [64607040] = {quest=33206, criteria=4,}, -- in the Croaking Hollow
+    [59204950] = {quest=33207, criteria=4, note="Use a {achievement:8723:Legend of the Past} tool to break in",}, -- inside the Mysterious Den
+    -- Smoldering
+    [69503290] = {quest=33208, criteria=5,}, -- at the Shrine of the Black Flame, Blazing Way area
+    [54007820] = {quest=33209, criteria=5,}, -- at the central cauldron of Firewalker Ruins
+}, {
+    achievement=8729, -- Treasure, Treasure Everywhere
+})
+ns.RegisterPoints(555, { -- Cavern of Lost Spirits
+    -- Skull-covered
+    [62903480] = {
+        quest=33203,
+        achievement=8729, -- Treasure, Treasure Everywhere
+        criteria=2,
+        note="Inside the cave",
+    },
+})
+
 -- Rares
 
 local archiereus = { -- Archiereus of Flame +4
@@ -181,6 +253,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         loot={
             104320, -- Cursed Talisman
         },
+        note="Use a {achievement:8723:Legend of the Past} tool to break in",
     },
     [44003720] = { -- Spirit of Jadefire
         quest=33293,
