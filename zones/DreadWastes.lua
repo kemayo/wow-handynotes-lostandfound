@@ -59,6 +59,9 @@ ns.RegisterPoints(422, { -- Dread Wastes
         quest=nil,
         criteria=21081,
         npc=50356,
+        loot={
+            86574, -- Elixir of Ancient Knowledge
+        },
     },
     [64005860] = { -- Nalash Verdantis
         quest=nil,

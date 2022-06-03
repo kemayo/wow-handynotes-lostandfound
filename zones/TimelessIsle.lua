@@ -126,6 +126,9 @@ local archiereus = { -- Archiereus of Flame +4
     quest=33312,
     criteria=31, -- API says 0 for its ID, maybe because of the two npc ids?
     npc=73174,
+    loot={
+        86574, -- Elixir of Ancient Knowledge
+    },
 }
 local flintlord = { -- Flintlord Gairan +4
     quest=33309,
@@ -144,6 +147,9 @@ ns.RegisterPoints(554, { -- Timeless Isle
         quest={33312, 33343},
         criteria=31, -- API says 0 for its ID, maybe because of the two npc ids?
         npc=73666,
+        loot={
+            86574, -- Elixir of Ancient Knowledge
+        },
         note="Summoned for {quest:33343}",
     },
     [63737281] = { -- Bufo
@@ -248,6 +254,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         npc=73167,
         loot={
             {104269,mount=561,}, -- Reins of the Thundering Onyx Cloud Serpent
+            104286, -- Quivering Firestorm Egg
         },
         routes={{65505730,71805100,74004500,64404060,60304490,58005840}},
     },
@@ -274,6 +281,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         npc=73277,
         loot={
             {104156, pet=1323,}, -- Ashleaf Spriteling
+            104289, -- Faintly-Glowing Herb
         },
     },
     [60208740] = { -- Rattleskew
@@ -291,6 +299,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         npc=73157,
         loot={
             104313, -- Golden Moss
+            104312, -- Strange Glowing Mushroom
         },
         note="Inside the cave",
     },
@@ -333,6 +342,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         npc=73173,
         loot={
             104306, -- Sunset Stone
+            104296, -- Ordon Ceremonial Robes
         },
     },
     [57207640] = { -- Watcher Osu
@@ -341,6 +351,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         npc=73170,
         loot={
             104305, -- Ashen Stone
+            104296, -- Ordon Ceremonial Robes
         },
     },
     [47008740] = { -- Zesqua
@@ -368,6 +379,9 @@ ns.RegisterPoints(554, { -- Timeless Isle
         quest=33261,
         criteria=23967,
         npc=73158,
+        loot={
+            104287, -- Windfeather Plume
+        },
         note="Rare spawn of {npc:72762:Brilliant Windfeather}",
     },
     [23604980] = { -- Great Turtle Furyshell +6
@@ -375,7 +389,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         criteria=23969,
         npc=73161,
         loot={
-            {86584,toy=true,}, -- Hardened Shell
+            {86584, toy=true,}, -- Hardened Shell
         },
         note="Rare spawn of {npc:72764:Great Turtle}",
     },
@@ -384,7 +398,8 @@ ns.RegisterPoints(554, { -- Timeless Isle
         criteria=23989,
         npc=73163,
         loot={
-            {104161,pet=1330,}, -- Death Adder Hatchling
+            {104161, pet=1330,}, -- Death Adder Hatchling
+            104292, -- Partially-Digested Meal
         },
         note="Rare spawn of {npc:72841:Death Adder}",
     },
@@ -399,7 +414,8 @@ ns.RegisterPoints(554, { -- Timeless Isle
         criteria=23985,
         npc=73166,
         loot={
-            {104168,pet=1337,}, -- Spineclaw Crab
+            {104168, pet=1337,}, -- Spineclaw Crab
+            104293, -- Scuttler's Shell
         },
         note="Rare spawn of {npc:72766:Ancient Spineclaw}",
     },

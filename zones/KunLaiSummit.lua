@@ -65,11 +65,17 @@ ns.RegisterPoints(379, { -- Kun-Lai Summit
         quest=nil,
         criteria=21100,
         npc=50332,
+        loot={
+            86566, -- Forager's Gloves
+        },
     },
     [63801380] = { -- Nessos the Oracle
         quest=nil,
         criteria=21093,
         npc=50789,
+        loot={
+            {86584, toy=true,}, -- Hardened Shell
+        },
     },
     [44806380] = { -- Scritch
         quest=nil,

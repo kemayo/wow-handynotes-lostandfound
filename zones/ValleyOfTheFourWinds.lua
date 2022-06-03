@@ -77,6 +77,9 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
         quest=nil,
         criteria=21056,
         npc=50766,
+        loot={
+            86580, -- Wilted Lilypad
+        },
     },
     [36802540] = { -- Sulik'shor
         quest=nil,
