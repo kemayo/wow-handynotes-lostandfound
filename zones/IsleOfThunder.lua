@@ -171,7 +171,7 @@ ns.RegisterPoints(504, { -- Isle of Thunder
     },
 }, {
     achievement=8108,
-    note="/bow to each stage of {npc:69907:Kroshik}; only one can be up at a time",
+    note="/bow to each stage of {npc:69907:Kroshik}; not all up at the same time",
     atlas="nameplates-icon-elite-silver",
     minimap=true,
 })
