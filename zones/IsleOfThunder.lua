@@ -81,6 +81,11 @@ ns.RegisterPoints(504, { -- Isle of Thunder
             95566, -- Ra'sha's Sacrificial Dagger
         },
     },
+    [30407830] = {
+        achievement=8112, -- Blue Response
+        texture=ns.atlas_texture("nameplates-icon-elite-silver", {r=0,g=0.5,b=1,a=1,scale=1}),
+        note="Run near {npc:69128} to scare them until a blue {npc:70215} spawns. This may take some time.",
+    },
 })
 
 -- Thunder Plunder
