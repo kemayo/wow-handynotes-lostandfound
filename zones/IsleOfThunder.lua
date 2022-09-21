@@ -144,3 +144,28 @@ ns.RegisterPoints(504, { -- Isle of Thunder
     minimap=true,
     atlas="poi-torghast",
 })
+
+-- When in Ihgaluk, Do as the Skumblade Do
+ns.RegisterPoints(504, { -- Isle of Thunder
+    [51207120] = { -- Kroshik Egg
+        criteria=22832,
+        -- npc=69907,
+    },
+    [51407400] = { -- Baby Kroshik (around this area)
+        criteria=22833,
+        -- npc=69908,
+    },
+    [52008240] = { -- Kroshik Adult (around this area)
+        criteria=22834,
+        -- npc=69218,
+    },
+    [55008780] = { -- Sacrificed Kroshik
+        criteria=22835,
+        -- npc=70226,
+    },
+}, {
+    achievement=8108,
+    note="/bow to each stage of {npc:69907:Kroshik}; only one can be up at a time",
+    atlas="nameplates-icon-elite-silver",
+    minimap=true,
+})
