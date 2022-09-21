@@ -68,7 +68,7 @@ ns.RegisterPoints(371, { -- The Jade Forest
 }, {})
 ns.RegisterPoints(504, { -- Isle of the Thunder King
     [35107010] = numbered{achievement=8049, criteria=1}, -- Zandalari Prophecy, Coming of Age
-    [68704580] = numbered{achievement=8049, criteria=2}, -- Zandalari Prophecy, For Council and King
+    [66104460] = numbered{achievement=8049, criteria=2}, -- Zandalari Prophecy, For Council and King
     [36307040] = numbered{achievement=8049, criteria=3}, -- Zandalari Prophecy, Shadows of the Loa
     [52604140] = numbered{achievement=8049, criteria=4}, -- Zandalari Prophecy, The Dark Prophet Zul
     [40204060] = numbered{achievement=8050, criteria=1}, -- Rumbles of Thunder, Lei Shen
