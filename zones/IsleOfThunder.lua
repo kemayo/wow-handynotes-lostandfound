@@ -191,17 +191,17 @@ ns.RegisterPoints(504, { -- Isle of Thunder
 -- It Was Worth Every Ritual Stone
 ns.RegisterPoints(504, { -- Isle of Thunder
     -- Spirit
-    [30705860] = {npc=69633, criteria=22815,}, -- Kor'dok and Tinzo the Emberkeeper
-    [35706380] = {npc=139575, criteria=22814,}, -- Spirit of Warlord Teng
-    [55208770] = {npc=69341, criteria=22812,}, -- Echo of Kros
+    [30705860] = {npc=69633, criteria=22815, loot={94720},}, -- Kor'dok and Tinzo the Emberkeeper
+    [35706380] = {npc=69471, criteria=22814, loot={94707},}, -- Spirit of Warlord Teng
+    [55208770] = {npc=69341, criteria=22812, loot={94708},}, -- Echo of Kros
     -- Lightning
-    [44506100] = {npc=139576, criteria=23205,}, -- Electromancer Ju'le
-    [48002600] = {npc=69749, criteria=22763,}, -- Qi'nor
-    [55304790] = {npc=69767, criteria=22817,}, -- Ancient Mogu Guardian
+    [44506100] = {npc=69339, criteria=23205, loot={94825},}, -- Electromancer Ju'le
+    [48002600] = {npc=69749, criteria=22763, loot={94824},}, -- Qi'nor
+    [55304790] = {npc=69767, criteria=22817, loot={94826},}, -- Ancient Mogu Guardian
     -- Primal
-    [49902070] = {npc=139577, criteria=23206,}, -- Incomplete Drakkari Colossus
-    [57907920] = {npc=69396, criteria=22813,}, -- Cera
-    [68903930] = {npc=70080, criteria=22759,}, -- Windweaver Akil'amon
+    [49902070] = {npc=69347, criteria=23206, loot={94823},}, -- Incomplete Drakkari Colossus
+    [57907920] = {npc=69396, criteria=22813, loot={94706},}, -- Cera
+    [68903930] = {npc=70080, criteria=22759, loot={94709},}, -- Windweaver Akil'amon
 }, {
     achievement=8101,
     active=ns.conditions.Item(94221, 3), -- Shan'ze Ritual Stone
