@@ -91,6 +91,11 @@ ns.RegisterPoints(504, { -- Isle of Thunder
         atlas="warfronts-basemapicons-alliance-barracks-minimap", scale=1.2,
         note="Kill 10x {npc:69216} in the area to get 10 stacks of {spell:136842}, then kill {npc:69326}",
     },
+    [55603860] = {
+        achievement=8116, -- You Made Me Bleed My Own Blood
+        atlas="warfronts-basemapicons-horde-barracks-minimap", scale=1.2,
+        note="Kill {npc:69435} without killing any {npc:69436}",
+    },
 })
 
 -- Thunder Plunder
