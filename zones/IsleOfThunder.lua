@@ -96,6 +96,12 @@ ns.RegisterPoints(504, { -- Isle of Thunder
         atlas="warfronts-basemapicons-horde-barracks-minimap", scale=1.2,
         note="Kill {npc:69435} without killing any {npc:69436}",
     },
+    [60605400] = {
+        achievement=8119, -- Our Powers Combined
+        criteria=true,
+        atlas="crossedflagswithtimer",
+        note="The priests will bless {npc:69336} 30 seconds after they're engaged. To engage without killing them at max level use {item:137663}.",
+    },
 })
 
 -- Thunder Plunder
