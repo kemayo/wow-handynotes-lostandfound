@@ -53,6 +53,7 @@ ns.RegisterPoints(504, { -- Isle of Thunder
 })
 ns.RegisterPoints(505, { -- Lightning Vein Mine
     [33802760] = { -- Backbreaker Uru +5
+        achievement=8103, -- Champions of Lei Shen
         criteria=22827,
         npc=70001,
     },
