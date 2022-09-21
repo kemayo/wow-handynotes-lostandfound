@@ -86,6 +86,11 @@ ns.RegisterPoints(504, { -- Isle of Thunder
         texture=ns.atlas_texture("nameplates-icon-elite-silver", {r=0,g=0.5,b=1,a=1,scale=1}),
         note="Run near {npc:69128} to scare them until a blue {npc:70215} spawns. This may take some time.",
     },
+    [55203040] = {
+        achievement=8115, -- Speed Metal
+        atlas="warfronts-basemapicons-alliance-barracks-minimap", scale=1.2,
+        note="Kill 10x {npc:69216} in the area to get 10 stacks of {spell:136842}, then kill {npc:69326}",
+    },
 })
 
 -- Thunder Plunder
