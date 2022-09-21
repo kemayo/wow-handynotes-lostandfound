@@ -83,6 +83,7 @@ ns.RegisterPoints(504, { -- Isle of Thunder
     },
 })
 
+-- Thunder Plunder
 ns.RegisterPoints(504, { -- Isle of Thunder
     [34804750] = {},
     [37906090] = {},
@@ -104,4 +105,27 @@ ns.RegisterPoints(504, { -- Isle of Thunder
     label="Trove of the Thunder King",
     note="Random spawn chance, lootable weekly",
     minimap=true,
+})
+
+-- These Mogu Have Gotta Go-gu
+ns.RegisterPoints(504, { -- Isle of Thunder
+    [38705810] = {
+        criteria=22837,
+        npc=69809, -- Forgemaster Deng
+        active=ns.conditions.Item(94233), -- Incantation of Deng
+    },
+    [38905930] = {
+        criteria=22836,
+        npc=69800, -- Haquin of the Hundred Spears
+        active=ns.conditions.Item(94130), -- Incantation of Haquin
+    },
+    [38505480] = {
+        criteria=22838,
+        npc=69961, -- Sparkmaster Vu
+        active=ns.conditions.Item(95350), -- Incantation of Vu
+    },
+}, {
+    achievement=8110, -- These Mogu Have Gotta Go-gu
+    minimap=true,
+    atlas="poi-torghast",
 })
