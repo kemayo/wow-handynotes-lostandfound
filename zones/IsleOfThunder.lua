@@ -90,3 +90,26 @@ ns.RegisterPoints(504, { -- Isle of Thunder
         },
     },
 })
+
+ns.RegisterPoints(504, { -- Isle of Thunder
+    [34804750] = {},
+    [37906090] = {},
+    [28808080] = {},
+    [40807470] = {},
+    [35006300] = {},
+    [34804750] = {},
+    [39006500] = {},
+    [53005300] = {},
+    [44206740] = {},
+    [35006300] = {},
+    [37006820] = {},
+    [51007400] = {},
+    [50707070] = {},
+    [38905470] = {},
+    [40007400] = {},
+}, {
+    achievement=8104, -- Thunder Plunder
+    label="Trove of the Thunder King",
+    note="Random spawn chance, lootable weekly",
+    minimap=true,
+})
