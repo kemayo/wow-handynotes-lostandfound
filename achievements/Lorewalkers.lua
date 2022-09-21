@@ -2,6 +2,7 @@ local myname, ns = ...
 
 local numbered = function(point)
 	point.texture = ns.atlas_texture("services-number-"..point.criteria, nil, 0.25)
+    point.minimap = true
 	return point
 end
 
