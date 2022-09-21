@@ -59,7 +59,8 @@ ns.RegisterPoints(505, { -- Lightning Vein Mine
     },
 })
 ns.RegisterPoints(506, { -- The Swollen Vault
-    [32003180] = { -- Molthor +6
+    [36003250] = { -- Molthor +6
+        achievement=8103, -- Champions of Lei Shen
         criteria=22829,
         npc=70003,
     },
