@@ -103,6 +103,17 @@ ns.RegisterPoints(504, { -- Isle of Thunder
         atlas="crossedflagswithtimer",
         note="The priests will bless {npc:69336} 30 seconds after they're engaged. To engage without killing them at max level use {item:137663}.",
     },
+    [62904080] = {
+        achievement=8114, -- Platform Hero
+        atlas="ui-squarebuttonbrown-up",
+        note="Go inside and stand on platforms for 90 seconds",
+    },
+    [48873932] = {
+        achievement=8120, -- Direhorn in a China Shop
+        path={52013663, label="{npc:69193}", atlas="playerpartyblip"},
+        atlas="creationcatalyst-32x32", minimap=true,
+        note="Kite the {npc:69193} to the {npc:70244} then get it to charge. Don't kill the {npc:69302}. It only charges if you move further away from it.",
+    }
 })
 
 -- Thunder Plunder
