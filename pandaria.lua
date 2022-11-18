@@ -16,3 +16,5 @@ ns.riches = ns.nodeMaker{
     achievement=7997, -- Riches of Pandaria
     atlas="auctioneer",
 }
+
+ns.RegisterPoints(424, {}) -- continent
