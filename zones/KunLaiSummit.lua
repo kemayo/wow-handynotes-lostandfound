@@ -126,6 +126,7 @@ ns.RegisterPoints(379, { -- Kun-Lai Summit
         routes={
             {64606400, 68006440, 74606780, 71607240, 71207420, 67807940},
         },
+        vignette=98,
     },
     [53606460] = { -- Sha of Anger
         quest=32099,
