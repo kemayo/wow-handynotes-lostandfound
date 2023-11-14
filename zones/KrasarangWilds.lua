@@ -135,3 +135,62 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         },
     },
 })
+
+-- Lobstmourne
+ns.RegisterPoints(418, { -- Krasarang Wilds
+    [12608200] = {
+        npc=66936, -- Clawlord Krilmandar
+        loot={90087}, -- Lobstmourne
+        note="Kill six Makrura elites around Pandaria to make {item:90172:Clamshell Band}",
+        active=ns.conditions.Item(90172), -- Clamshell Band
+        texture=ns.atlas_texture("Vehicle-Trap-Grey", {r=0, g=0, b=1, scale=1.3}),
+        minimap=true,
+    },
+})
+local makrura = {
+    note="Kill the five other Makrura for their clamshells, make the {item:90172:Clamshell Band}, and summon {npc:66936:Clawlord Krilmandar} in Krasarang Wilds",
+    inbag=90172,
+    texture=ns.atlas_texture("Vehicle-Trap-Grey", {r=0, g=1, b=1, scale=1.3}),
+    minimap=true,
+}
+ns.RegisterPoints(371, { -- The Jade Forest
+    [59203660] = {
+        npc=66932, -- Akkalou
+        loot={90166}, -- Akkalou's Clamshell
+        found={ns.conditions.Item(90166)},
+    },
+    [59809580] = {
+        npc=66937, -- Akkalar
+        loot={90167}, -- Akkalar's Clamshell
+        found={ns.conditions.Item(90167)},
+    },
+}, makrura)
+ns.RegisterPoints(418, { -- Krasarang Wilds
+    [40008860] = {
+        npc=66934, -- Damlak
+        loot={90169}, -- Damlak's Clamshell
+        found={ns.conditions.Item(90169)},
+    },
+}, makrura)
+ns.RegisterPoints(422, { -- Dread Wastes
+    [27006900] = {
+        npc=66935, -- Clamstok
+        loot={90170}, -- Clamstok's Clamshell
+        found={ns.conditions.Item(90170)},
+    },
+}, makrura)
+ns.RegisterPoints(388, { -- Townlong Steppes
+    [42609260] = {
+        npc=66938, -- Odd'nirok
+        loot={90171}, -- Odd'nirok's Clamshell
+        found={ns.conditions.Item(90171)},
+    },
+}, makrura)
+ns.RegisterPoints(379, { -- Kun Lai Summit
+    [54202160] = {
+        npc=66933, -- Kishak
+        loot={90168}, -- Kishak's Clamshell
+        found={ns.conditions.Item(90168)},
+        route={54202160, 54002060, 51601840, 47001840, 45002060, 44201940, 42202380},
+    },
+}, makrura)
