@@ -145,8 +145,8 @@ ns.RegisterPoints(554, { -- Timeless Isle
     [32603280] = {}, --- On a rock at the west side of 3-Breeze Terrace.
     [22403870] = {}, --- Next to the Horde camp graveyard.
 }, {
-    label="{achievement:8723}",
-    achievement=8723,
+    label="{achievement:8784}",
+    achievement=8784,
     criteria=true,
     atlas="mechagon-projects",
     always=true,
