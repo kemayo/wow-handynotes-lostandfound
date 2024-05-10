@@ -224,12 +224,13 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
     },
     [43606940] = { -- Cranegnasher
-        quest=33319,
+        quest=32967, -- 33319?
         criteria=23976,
         npc=72049,
         loot={
             104268, -- Pristine Stalker Hide
         },
+        note="Kite a {npc:73297:Fishgorged Crane} here from the south",
     },
     [25802260] = { -- Dread Ship Vazuvius
         quest=33314,
@@ -328,6 +329,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
             104321, -- Captain Zvezdan's Lost Leg
             104219, -- Technique: Glyph of Skeleton
         },
+        vignette=61,
     },
     [44003920] = { -- Rock Moss
         quest=33307, -- first: 33283
