@@ -1,5 +1,7 @@
 local myname, ns = ...
 
+-- Celestial Challenge: 33117
+
 -- Treasure, Treasure Everywhere
 -- https://www.wowhead.com/achievement=8729/treasure-treasure-everywhere#comments:id=1884527
 
@@ -33,6 +35,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
     [49706570] = {quest=33195}, -- south of central lake
     [53107080] = {quest=33196}, -- SE of chest #025
     [52706270] = {quest=33197}, -- SE of central lake
+    [44146549] = {quest=33198}, -- On a tree stump
     [61708850] = {quest=33227}, -- in the shipwreck of Cpt. Zvezdan
 }, {
     label="{achievement:8729.1:Moss-Covered Chests}",
@@ -293,7 +296,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
             {104269,mount=561,}, -- Reins of the Thundering Onyx Cloud Serpent
             104286, -- Quivering Firestorm Egg
         },
-        routes={{65505730,71805100,74004500,64404060,60304490,58005840}},
+        routes={{65505730,71805100,74004500,64404060,60304490,56505130,58005840}},
     },
     [52408240] = { -- Jakur of Ordon
         quest=33306, -- first: 33281
@@ -408,6 +411,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         loot={
             {104167, pet=1336,}, -- Skunky Alemental
         },
+        vignette=49,
     },
 }, {
     achievement=8714, -- Timeless Champion
