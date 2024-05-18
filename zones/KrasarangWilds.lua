@@ -8,7 +8,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
 
 ns.RegisterPoints(418, { -- Krasarang Wilds
     [54267232] = { loot={87798}, group="junk", quest=31863, }, -- Stack of Papers
-    [71000920] = ns.riches{ loot={86220}, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
+    [70480958] = ns.riches{ loot={86220}, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
 })
 
 -- Rares
