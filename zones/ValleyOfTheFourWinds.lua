@@ -9,9 +9,7 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
     [19103780] = { loot={86218}, quest=31407, }, -- Staff of the Hidden Master
     [19004250] = { loot={86218}, quest=31407, }, -- Staff of the Hidden Master
     [43603740] = { label="Cache of Pilfered Goods", quest=31406, },
-}, {
-	achievement=7284, -- Is Another Man's Treasure
-})
+}, ns.treasure{})
 
 ns.RegisterPoints(376, { -- Valley of the Four Winds
     [23712833] = { label="Virmen Treasure Cache", quest=31405, },

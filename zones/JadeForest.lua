@@ -9,9 +9,7 @@ ns.RegisterPoints(371, { -- The Jade Forest
     [46102920] = { loot={85777}, note="in the cave", quest=31399, }, -- Ancient Pandaren Mining Pick
     [47106740] = { loot={86196}, quest=31402, }, --Ancient Jinyu Staff
     [46207120] = { loot={86196}, quest=31402, }, --Ancient Jinyu Staff
-}, {
-	achievement=7284, -- Is Another Man's Treasure
-})
+}, ns.treasure{})
 ns.RegisterPoints(373, { -- Greenstone Quarry, cave in Jade Forest
     [33107800] = {}, -- Ancient Pandaren Mining Pick
     [44007050] = {}, -- Ancient Pandaren Mining Pick
@@ -19,8 +17,7 @@ ns.RegisterPoints(373, { -- Greenstone Quarry, cave in Jade Forest
     [38704750] = {}, -- Ancient Pandaren Mining Pick
     [32606270] = {}, -- Ancient Pandaren Mining Pick
     [38231394] = {}, -- Ancient Pandaren Mining Pick
-}, {
-	achievement=7284, -- Is Another Man's Treasure
+}, ns.treasure{
 	quest=31399,
 	loot={85777},
 })

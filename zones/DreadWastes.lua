@@ -11,9 +11,7 @@ ns.RegisterPoints(422, { -- Dread Wastes
     [54305650] = { loot={86526}, quest=31437, }, -- Swarmkeeper's Medallion
     [71803610] = { loot={86519}, quest=31429, }, -- Wind-Reaver's Dagger of Quick Strikes
     [28804190] = { loot={86527}, quest=31438, }, -- Blade of the Poisoned Mind
-}, {
-	achievement=7284, -- Is Another Man's Treasure
-})
+}, ns.treasure{})
 
 -- Rares
 

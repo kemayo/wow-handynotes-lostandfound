@@ -7,19 +7,13 @@ ns.RegisterPoints(379, { -- Kun Lai Summit
     [71206260] = { loot={88723}, note="in Stash of Yaungol Weapons", quest=31421, }, -- Sturdy Yaungol Spear
     [44705240] = { loot={86393}, quest=31417, }, -- Tablet of Ren Yun
     [47007300] = { label="Mo-Mo's Treasure Chest", group="junk", quest=31868, },
-}, {
-    achievement=7284, -- Is Another Man's Treasure
-})
+}, ns.treasure{})
 ns.RegisterPoints(383, { -- TheDeeper, cave in Kun-Lai
     [24106580] = { loot={86394}, quest=31413, }, -- Hozen Warrior Spear
-}, {
-    achievement=7284, -- Is Another Man's Treasure
-})
+}, ns.treasure{})
 ns.RegisterPoints(381, { -- PrankstersHollow, cave in Kun-Lai
     [54706980] = { label="Sprite's Cloth Chest", quest=31412, },
-}, {
-    achievement=7284, -- Is Another Man's Treasure
-})
+}, ns.treasure{})
 
 ns.RegisterPoints(379, { -- Kun Lai Summit
     [64234513] = { loot={86471}, quest=31420, note="in the cave" }, -- Ancient Mogu Tablet

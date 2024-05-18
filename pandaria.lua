@@ -15,6 +15,12 @@ ns.groups["junk"] = "Junk"
 ns.riches = ns.nodeMaker{
     achievement=7997, -- Riches of Pandaria
     atlas="auctioneer",
+    minimap=true,
+}
+ns.treasure = ns.nodeMaker{
+    achievement=7284, -- Is Another Man's Treasure
+    -- atlas="reagents",
+    minimap=true,
 }
 
 ns.RegisterPoints(424, {}) -- continent

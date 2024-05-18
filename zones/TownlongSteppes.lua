@@ -3,9 +3,7 @@ local myname, ns = ...
 ns.RegisterPoints(388, { -- Townlong Steppes
     [66304470] = { loot={86518}, quest=31425, }, -- Yaungol Fire Carrier
     [66804800] = { loot={86518}, quest=31425, }, -- Yaungol Fire Carrier
-}, {
-	achievement=7284, -- Is Another Man's Treasure
-})
+}, ns.treasure{})
 ns.RegisterPoints(388, { -- Townlong Steppes
     [62823405] = { label="Abandoned Crate of Goods", note="in a tent", quest=31427, },
     [65838608] = { loot={86472}, quest=31426, }, -- Amber Encased Moth
