@@ -13,7 +13,7 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
 
 ns.RegisterPoints(376, { -- Valley of the Four Winds
     [23712833] = { label="Virmen Treasure Cache", quest=31405, },
-    [75105510] = { loot={86220}, quest=31408, } -- Saurok Stone Tablet
+    [75105510] = { loot={86220}, quest=31408, path=77285750, } -- Saurok Stone Tablet
 }, ns.riches{})
 
 ns.RegisterPoints(376, { -- Valley of the Four Winds
