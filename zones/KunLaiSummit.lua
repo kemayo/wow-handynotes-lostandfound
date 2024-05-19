@@ -6,7 +6,6 @@ ns.RegisterPoints(379, { -- Kun Lai Summit
     [73107350] = { label="Sprite's Cloth Chest", note="in the cave", quest=31412, },
     [71206260] = { loot={88723}, note="in Stash of Yaungol Weapons", quest=31421, }, -- Sturdy Yaungol Spear
     [44705240] = { loot={86393}, quest=31417, }, -- Tablet of Ren Yun
-    [47007300] = { label="Mo-Mo's Treasure Chest", group="junk", quest=31868, },
 }, ns.treasure{})
 ns.RegisterPoints(383, { -- TheDeeper, cave in Kun-Lai
     [24106580] = { loot={86394}, quest=31413, }, -- Hozen Warrior Spear
@@ -30,6 +29,10 @@ ns.RegisterPoints(382, { -- KnucklethumpHole, cave in Kun-Lai
 ns.RegisterPoints(380, { -- HowlingwindCavern, cave in Kun-Lai
     [41674412] = ns.riches{ label="Stolen Sprite Treasure", quest=31415, },
 })
+
+ns.RegisterPoints(379, {
+    [47007300] = { label="Mo-Mo's Treasure Chest", quest=31868, },
+}, ns.junk{})
 
 -- Rares
 

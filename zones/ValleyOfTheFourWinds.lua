@@ -19,9 +19,7 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
 ns.RegisterPoints(376, { -- Valley of the Four Winds
 	[92003900] = { loot={87524}, quest=31869, }, -- Boat-Building Instructions
     [52056382] = { loot={110505}, quest=37246, } -- Mysterious Fruit Pile (Mesmerizing Fruit Hat)
-}, {
-    group="junk",
-})
+}, ns.junk{})
 
 -- Rares
 

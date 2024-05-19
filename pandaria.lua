@@ -22,5 +22,10 @@ ns.treasure = ns.nodeMaker{
     -- atlas="reagents",
     minimap=true,
 }
+ns.junk = ns.nodeMaker{
+    group="junk",
+    minimap=true,
+    scale=0.9,
+}
 
 ns.RegisterPoints(424, {}) -- continent

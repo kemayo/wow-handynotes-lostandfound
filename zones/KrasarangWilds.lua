@@ -8,7 +8,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
     [50804930] = { loot={86124}, quest=31409, }, -- Pandaren Fishing Spear
 }, ns.treasure{art=430})
 ns.RegisterPoints(418, { -- Krasarang Wilds
-    [52007300] = { loot={87798}, group="junk", quest=31863, }, -- Stack of Papers
+    [52007300] = ns.junk{ loot={87798}, quest=31863, }, -- Stack of Papers
     [69500790] = ns.riches{ loot={86220}, note="in the cave", quest=31408, path=70670959 }, -- Saurok Stone Tablet
 }, {art=430})
 
@@ -20,7 +20,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
     [52814644] = { loot={86124}, quest=31409, }, -- Pandaren Fishing Spear
 }, ns.treasure{art=499})
 ns.RegisterPoints(418, { -- Krasarang Wilds
-    [54267232] = { loot={87798}, group="junk", quest=31863, }, -- Stack of Papers
+    [54267232] = ns.junk{ loot={87798}, quest=31863, }, -- Stack of Papers
     [70480958] = ns.riches{ loot={86220}, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
 }, {art=499})
 

@@ -29,10 +29,10 @@ ns.RegisterPoints(371, { -- The Jade Forest
     [51229999] = { label="Ship's Locker", quest=31396, },
 }, ns.riches{})
 ns.RegisterPoints(371, { -- The Jade Forest
-    [24005300] = { label="Chest of Supplies", group="junk", quest=31864, },
-    [46308070] = { label="Offering of Rememberance", group="junk", quest=31865, },
-    [62452752] = { label="Stash of Gems", group="junk", quest=31866, },
-})
+    [24005300] = { label="Chest of Supplies", quest=31864, },
+    [46308070] = { label="Offering of Rememberance", quest=31865, },
+    [62452752] = { label="Stash of Gems", quest=31866, },
+}, ns.junk{})
 
 -- Rares
 
