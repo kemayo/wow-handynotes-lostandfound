@@ -21,7 +21,7 @@ ns.RegisterPoints(379, { -- Kun Lai Summit
     [52575154] = { loot={86430}, note="in Rikktik's Tiny Chest", quest=31419, }, -- Rikktik's Tick Remover
     [72013396] = { loot={86422}, quest=31416, }, -- Statue of Xuen
     [59405300] = { label="Stolen Sprite Treasure", note="in the cave", quest=31415, },
-    [59247303] = { loot={86427}, quest=31422, }, -- Terracotta Head
+    [59247303] = { loot={86427}, quest=31422, nearby={57007540,57807630,58407340,59207440,}, note="Various spawn points in the ruins", }, -- Terracotta Head
 }, ns.riches{})
 ns.RegisterPoints(382, { -- KnucklethumpHole, cave in Kun-Lai
     [52002750] = ns.riches{ label="Hozen Treasure Cache", quest=31414, },
