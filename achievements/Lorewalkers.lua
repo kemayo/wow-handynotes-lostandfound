@@ -14,7 +14,7 @@ ns.RegisterPoints(379, { -- Kun Lai Summit
     [74488355] = numbered{achievement=6846, criteria=4}, -- Fish Tails, Role Call
     [44705237] = numbered{achievement=7230, criteria=3}, -- Legend of the Brewfathers, Ren Yun the Blind
     [50307930] = numbered{achievement=6847, criteria=1}, -- The Song of the Yaungol, Yaungol Tactics
-    [50604805] = numbered{achievement=6754, criteria=1}, -- The Dark Heart of the Mogu, Valley of the Emperors
+    [52904660] = numbered{achievement=6754, criteria=1, note="Inside the Tomb of Conquerors"}, -- The Dark Heart of the Mogu, Valley of the Emperors
     [63044082] = numbered{achievement=6858, criteria=5}, -- What is Worth Fighting For, Victory in Kun-Lai
     [43825119] = numbered{achievement=6855, criteria=2}, -- The Seven Burdens of Shaohao, The Emperor's Burden - Part 2
     [45766190] = numbered{achievement=6850, criteria=4}, -- Hozen in the Mist, The Hozen Ravage
@@ -22,6 +22,9 @@ ns.RegisterPoints(379, { -- Kun Lai Summit
 })
 ns.RegisterPoints(434, { -- The Ancient Passage
     [55051599] = numbered{achievement=6716, criteria=2}, -- Between a Saurok and a Hard Place, The Defiant
+})
+ns.RegisterPoints(385, { -- Tomb of Conquerors
+    [58407121] = numbered{achievement=6754, criteria=1}, -- The Dark Heart of the Mogu, Valley of the Emperors
 })
 ns.RegisterPoints(388, { -- Townlong Steppes
     [84087286] = numbered{achievement=6847, criteria=4}, -- The Song of the Yaungol, Trapped in a Strange Land
