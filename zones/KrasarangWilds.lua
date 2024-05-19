@@ -1,15 +1,28 @@
 local myname, ns = ...
 
+-- Pre-landing
+
+ns.RegisterPoints(418, { -- Krasarang Wilds
+    [42409200] = { loot={86122}, label="Equipment Locker", quest=31410, }, -- Plankwalking Greaves
+    [52308870] = { loot={87266}, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
+    [50804930] = { loot={86124}, quest=31409, }, -- Pandaren Fishing Spear
+}, ns.treasure{art=430})
+ns.RegisterPoints(418, { -- Krasarang Wilds
+    [52007300] = { loot={87798}, group="junk", quest=31863, }, -- Stack of Papers
+    [69500790] = ns.riches{ loot={86220}, note="in the cave", quest=31408, path=70670959 }, -- Saurok Stone Tablet
+}, {art=430})
+
+-- Post-landing
+
 ns.RegisterPoints(418, { -- Krasarang Wilds
     [43669232] = { loot={86122}, label="Equipment Locker", quest=31410, }, -- Plankwalking Greaves
     [54488873] = { loot={87266}, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
     [52814644] = { loot={86124}, quest=31409, }, -- Pandaren Fishing Spear
-}, ns.treasure{})
-
+}, ns.treasure{art=499})
 ns.RegisterPoints(418, { -- Krasarang Wilds
     [54267232] = { loot={87798}, group="junk", quest=31863, }, -- Stack of Papers
     [70480958] = ns.riches{ loot={86220}, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
-})
+}, {art=499})
 
 -- Rares
 
@@ -59,6 +72,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
 })
 
 ns.RegisterPoints(418, { -- Krasarang Wilds
+    -- Post-landing PVP rares:
     [84802720] = { -- Dalan Nightbreaker
         quest=nil,
         npc=68318,
@@ -101,7 +115,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
             92784, -- SI:7 Operative's Manual
         },
     },
-})
+}, {art=499})
 
 ns.RegisterPoints(418, { -- Krasarang Wilds
     [39866578] = { -- Zandalari Warbringer
