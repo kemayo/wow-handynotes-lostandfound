@@ -79,6 +79,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         loot={
             92783, -- Mark of the Hardened Grunt
         },
+        faction="Horde",
     },
     [87402920] = { -- Disha Fearwarden
         quest=nil,
@@ -86,6 +87,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         loot={
             92787, -- Horde Insignia of Conquering
         },
+        faction="Horde",
     },
     [13605700] = { -- Kar Warmaker
         quest=nil,
@@ -93,6 +95,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         loot={
             92782, -- Steadfast Footman's Medallion
         },
+        faction="Alliance",
     },
     [84403100] = { -- Mavis Harms
         quest=nil,
@@ -100,6 +103,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         loot={
             92785, -- Kor'kron Book of Hurting
         },
+        faction="Horde",
     },
     [10605660] = { -- Muerta
         quest=nil,
@@ -107,6 +111,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         loot={
             92786, -- Alliance Insignia of Conquering
         },
+        faction="Alliance",
     },
     [13006660] = { -- Ubunti the Shade
         quest=nil,
@@ -114,6 +119,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         loot={
             92784, -- SI:7 Operative's Manual
         },
+        faction="Alliance",
     },
 }, {art=499})
 
