@@ -42,8 +42,7 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
 ns.RegisterPoints(422, { -- Dread Wastes
     [67506090] = numbered{achievement=6716, criteria=3}, -- Between a Saurok and a Hard Place, The Deserters
     [35533261] = numbered{achievement=6857, criteria=4}, -- Heart of the Mantid Swarm, The Empress
-    -- [53611548] = numbered{6857, 3, "Entrance"}, -- Heart of the Mantid Swarm, Amber
-    [52521006] = numbered{achievement=6857, criteria=3}, -- Heart of the Mantid Swarm, Amber
+    [52521006] = numbered{achievement=6857, criteria=3, path=53611548}, -- Heart of the Mantid Swarm, Amber
     [48383285] = numbered{achievement=6857, criteria=1}, -- Heart of the Mantid Swarm, Cycle of the Mantid
     [59905470] = numbered{achievement=6857, criteria=2}, -- Heart of the Mantid Swarm, Mantid Society
 })
