@@ -1,28 +1,18 @@
 local myname, ns = ...
 
--- Pre-landing
+-- Pre-landing: art=430
+-- Post-landing: art=499
+-- In the original change in patch 5.1(?), this actually changed the coordinates on the map, but as of the remix in 10.2.7 that's no longer the case
 
 ns.RegisterPoints(418, { -- Krasarang Wilds
     [42409200] = { loot={86122}, label="Equipment Locker", quest=31410, }, -- Plankwalking Greaves
     [52308870] = { loot={87266}, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
     [50804930] = { loot={86124}, quest=31409, }, -- Pandaren Fishing Spear
-}, ns.treasure{art=430})
+}, ns.treasure{})
 ns.RegisterPoints(418, { -- Krasarang Wilds
     [52007300] = ns.junk{ loot={87798}, quest=31863, }, -- Stack of Papers
     [69500790] = ns.riches{ loot={86220}, note="in the cave", quest=31408, path=70670959 }, -- Saurok Stone Tablet
-}, {art=430})
-
--- Post-landing
-
-ns.RegisterPoints(418, { -- Krasarang Wilds
-    [43669232] = { loot={86122}, label="Equipment Locker", quest=31410, }, -- Plankwalking Greaves
-    [54488873] = { loot={87266}, note="in a barrel", quest=31411, }, -- Recipe: Banana Infused Rum
-    [52814644] = { loot={86124}, quest=31409, }, -- Pandaren Fishing Spear
-}, ns.treasure{art=499})
-ns.RegisterPoints(418, { -- Krasarang Wilds
-    [54267232] = ns.junk{ loot={87798}, quest=31863, }, -- Stack of Papers
-    [70480958] = ns.riches{ loot={86220}, note="in the cave", quest=31408, }, -- Saurok Stone Tablet
-}, {art=499})
+})
 
 -- Rares
 

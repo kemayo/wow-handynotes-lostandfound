@@ -48,7 +48,6 @@ ns.RegisterPoints(422, { -- Dread Wastes
     [59905470] = numbered{achievement=6857, criteria=2}, -- Heart of the Mantid Swarm, Mantid Society
 })
 ns.RegisterPoints(418, { -- Krasarang Wilds
-    -- Pre-landing, art 430
     [50943169] = numbered{achievement=6754, criteria=2}, -- The Dark Heart of the Mogu, The Lost Dynasty
     [32782941] = numbered{achievement=6716, criteria=4}, -- Between a Saurok and a Hard Place, The Last Stand
     [40505662] = numbered{achievement=6855, criteria=4}, -- The Seven Burdens of Shaohao, The Emperor's Burden - Part 4
@@ -56,17 +55,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
     [30553857] = numbered{achievement=6846, criteria=3}, -- Fish Tails, Origins
     [72213101] = numbered{achievement=6856, criteria=4}, -- Ballad of Liu Lang, Waiting for the Turtle
     [81431145] = numbered{achievement=7230, criteria=1}, -- Legend of the Brewfathers, Quan Tou Kou the Two Fisted
-}, {art=430})
-ns.RegisterPoints(418, { -- Krasarang Wilds
-    -- Post-landing, art 499
-    [52962742] = numbered{achievement=6754, criteria=2}, -- The Dark Heart of the Mogu, The Lost Dynasty
-    [33402500] = numbered{achievement=6716, criteria=4}, -- Between a Saurok and a Hard Place, The Last Stand
-    [41705420] = numbered{achievement=6855, criteria=4}, -- The Seven Burdens of Shaohao, The Emperor's Burden - Part 4
-    [54508770] = numbered{achievement=6850, criteria=2}, -- Hozen in the Mist, Hozen Maturiy
-    [31003480] = numbered{achievement=6846, criteria=3}, -- Fish Tails, Origins
-    [75812668] = numbered{achievement=6856, criteria=4}, -- Ballad of Liu Lang, Waiting for the Turtle
-    [85600560] = numbered{achievement=7230, criteria=1}, -- Legend of the Brewfathers, Quan Tou Kou the Two Fisted
-}, {art=499})
+})
 ns.RegisterPoints(390, { -- Vale of Eternal Blossoms
     [26622149] = numbered{achievement=6858, criteria=4}, -- What is Worth Fighting For, Together, We Are Strong
     [40247748] = numbered{achievement=6754, criteria=4}, -- The Dark Heart of the Mogu, The Thunder King
