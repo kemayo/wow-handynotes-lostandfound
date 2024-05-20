@@ -18,7 +18,7 @@ ns.RegisterPoints(379, { -- Kun Lai Summit
     [64234513] = { loot={86471}, quest=31420, note="in the cave" }, -- Ancient Mogu Tablet
     [50366177] = { label="Hozen Treasure Cache", note="in the cave", quest=31414, },
     [36707970] = { label="Lost Adventurer's Belongings", quest=31418, },
-    [52575154] = { loot={86430}, note="in Rikktik's Tiny Chest", quest=31419, }, -- Rikktik's Tick Remover
+    [52575154] = { loot={86430}, note="In Rikktik's Tiny Chest", quest=31419, path=52285088, }, -- Rikktik's Tick Remover
     [72013396] = { loot={86422}, quest=31416, }, -- Statue of Xuen
     [59405300] = { label="Stolen Sprite Treasure", note="in the cave", quest=31415, },
     [59247303] = { loot={86427}, quest=31422, nearby={57007540,57807630,58407340,59207440,}, note="Various spawn points in the ruins", }, -- Terracotta Head
