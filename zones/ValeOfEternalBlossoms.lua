@@ -141,10 +141,11 @@ ns.RegisterPoints(390, { -- Vale of Eternal Blossoms
         criteria=20532,
         npc=63977,
     },
-    [45007620] = { -- Wulon
+    [45347624] = { -- Wulon
         quest=nil,
         criteria=20527,
         npc=63510,
+        path=40807720,
     },
 }, {
     achievement=7317, -- One Many Army
