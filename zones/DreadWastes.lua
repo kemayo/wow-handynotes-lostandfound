@@ -1,8 +1,8 @@
 local myname, ns = ...
 
 ns.RegisterPoints(422, { -- Dread Wastes
-    [66306660] = { loot={86522}, quest=31433, }, -- Blade of the Prime
-    [25905030] = { loot={86525}, quest=31436, note="in the underwater cave", }, -- Bloodsoaked Chitin Fragment
+    [66306660] = { loot={86522}, quest=31433, path=66776373, }, -- Blade of the Prime
+    [25905030] = { loot={86525}, quest=31436, path=25685416, note="In the underwater cave", }, -- Bloodsoaked Chitin Fragment
     [30209080] = { loot={86524}, quest=31435, }, -- Dissector's Staff of Mutation
     [33003010] = { loot={86521}, quest=31431, }, -- Lucid Amulet of the Agile Mind
     [48703000] = { loot={86520}, quest=31430, }, -- Malik's Stalwart Spear
