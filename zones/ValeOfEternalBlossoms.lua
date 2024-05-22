@@ -16,7 +16,7 @@ ns.RegisterPoints(390, { -- Vale of Eternal Blossoms
         criteria=21068,
         npc=50749,
         loot={
-            86579, -- Bottled Tornado
+            -- 86579, -- Bottled Tornado (pre-toy version)
             {134023,toy=true,}, -- Bottled Tornado
         },
     },
