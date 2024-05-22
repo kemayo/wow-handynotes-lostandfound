@@ -64,6 +64,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
 ns.RegisterPoints(418, { -- Krasarang Wilds
     -- Post-landing PVP rares:
     [84802720] = { -- Dalan Nightbreaker
+        criteria=1, -- Champion of Arms
         quest=nil,
         npc=68318,
         loot={
@@ -72,6 +73,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         faction="Horde",
     },
     [87402920] = { -- Disha Fearwarden
+        criteria=3, -- Champion of the Light
         quest=nil,
         npc=68319,
         loot={
@@ -80,6 +82,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         faction="Horde",
     },
     [13605700] = { -- Kar Warmaker
+        criteria=1, -- Champion of Arms
         quest=nil,
         npc=68321,
         loot={
@@ -88,6 +91,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         faction="Alliance",
     },
     [84403100] = { -- Mavis Harms
+        criteria=2, -- Champion of the Shadows
         quest=nil,
         npc=68317,
         loot={
@@ -96,6 +100,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         faction="Horde",
     },
     [10605660] = { -- Muerta
+        criteria=3, -- Champion of the Light
         quest=nil,
         npc=68322,
         loot={
@@ -104,6 +109,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         faction="Alliance",
     },
     [13006660] = { -- Ubunti the Shade
+        criteria=2, -- Champion of the Shadows
         quest=nil,
         npc=68320,
         loot={
@@ -111,7 +117,10 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         },
         faction="Alliance",
     },
-}, {art=499})
+}, {
+    art=499,
+    achievement=7932,
+})
 
 ns.RegisterPoints(418, { -- Krasarang Wilds
     [39866578] = { -- Zandalari Warbringer
