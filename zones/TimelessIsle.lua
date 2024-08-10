@@ -80,20 +80,25 @@ ns.RegisterPoints(555, { -- Cavern of Lost Spirits
 
 -- Extreme Treasure Hunter
 ns.RegisterPoints(554, { -- Timeless Isle
-    [49706940] = { -- Gleaming Treasure Chest
+    [49666940] = { -- Gleaming Treasure Chest
         quest=32969,
         criteria=24018,
+        vignette=57,
+        path=51467361,
+        note="Jump along the pillars",
     },
-    [54004720] = { -- Rope-Bound Treasure Chest
+    [53944722] = { -- Rope-Bound Treasure Chest
         quest=32968, -- 33163?
         criteria=24019,
         note="Run along the ropes",
         path={55154409, 57794726, 60204590},
+        vignette=56,
     },
     [58706010] = { -- Mist-Covered Treasure Chest
         quest=32971,
         criteria=24020,
         note="Use the statue and loot a chest while falling",
+        vignette=92, -- Gleaming Crane Statue
     },
 }, {
     achievement=8726,
