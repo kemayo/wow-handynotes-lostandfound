@@ -230,28 +230,18 @@ ns.RegisterPoints(554, {
 -- Note: most of these rares have two questids; a "first" that triggers
 -- once-per-character, and a daily. Daily only triggers on your second kill.
 
-local archiereus = { -- Archiereus of Flame +4
-    quest=33312, -- first:33288
-    criteria=31, -- API says 0 for its ID, maybe because of the two npc ids?
-    npc=73174,
-    loot={
-        86574, -- Elixir of Ancient Knowledge
-    },
-}
-local flintlord = { -- Flintlord Gairan +4
-    quest=33309, -- first:33285
-    criteria=23995,
-    npc=73172,
-    loot={
-        104298, -- Ordon Death Chime
-    },
-}
 ns.RegisterPoints(554, { -- Timeless Isle
-    [48203320] = archiereus,
-    [49602200] = archiereus,
-    [56603570] = archiereus,
-    [58202490] = archiereus,
-    [35003130] = { -- Archiereus of Flame
+    [56633595] = { -- Archiereus of Flame +4
+        additional={48203320, 49602200, 58202490},
+        quest=33312, -- first:33288
+        criteria=31, -- API says 0 for its ID, maybe because of the two npc ids?
+        npc=73174,
+        loot={
+            86574, -- Elixir of Ancient Knowledge
+        },
+        vignette=86,
+    },
+    [34552960] = { -- Archiereus of Flame
         quest={33312, 33343}, -- first:33288
         criteria=31, -- API says 0 for its ID, maybe because of the two npc ids?
         npc=73666,
@@ -259,16 +249,18 @@ ns.RegisterPoints(554, { -- Timeless Isle
             86574, -- Elixir of Ancient Knowledge
         },
         note="Summoned for {quest:33343}",
+        vignette=86,
     },
-    [63737281] = { -- Bufo
+    [65206980] = { -- Bufo
         quest=33301, -- first: 33276
         criteria=23986,
         npc=72775,
         loot={
             {104169, pet=1338,}, -- Gulp Froglet
         },
+        vignette=81,
     },
-    [60005100] = { -- Champion of the Black Flame
+    [60804729] = { -- Champion of the Black Flame
         quest=33299, -- first: 33274
         criteria=23996,
         npc=73171,
@@ -276,7 +268,8 @@ ns.RegisterPoints(554, { -- Timeless Isle
             {104302, toy=true,}, -- Blackflame Daggers
             106130, -- Big Bag of Herbs
         },
-        routes={{60005100,61404540,63704280,66804240,69404360,71104600,70205300,66405880}},
+        routes={{60804729,61404540,63704280,66804240,69404360,71104600,70205300,66405880}},
+        vignette=91,
     },
     [25203540] = { -- Chelon
         quest=32966,
@@ -286,7 +279,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
             {86584, toy=true,}, -- Hardened Shell
         },
     },
-    [54005240] = { -- Cinderfall
+    [54165289] = { -- Cinderfall
         quest=33310, -- first:33286
         criteria=23981,
         npc=73175,
@@ -294,6 +287,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
             104299, -- Falling Flame
             104261, -- Glowing Blue Ash
         },
+        vignette=77,
     },
     [43606940] = { -- Cranegnasher
         quest=32967, -- 33319?
@@ -304,7 +298,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
         note="Kite a {npc:73297:Fishgorged Crane} here from the south",
     },
-    [25802260] = { -- Dread Ship Vazuvius
+    [26162263] = { -- Dread Ship Vazuvius
         quest=33314,
         criteria=23987,
         npc=73281,
@@ -312,8 +306,9 @@ ns.RegisterPoints(554, { -- Timeless Isle
             {104294, toy=true,}, -- Rime of the Time-Lost Mariner
         },
         note="Requires {item:104115} from {npc:73279} to summon",
+        vignette=82,
     },
-    [33149115] = { -- Evermaw
+    [41789816] = { -- Evermaw
         quest=33289,
         criteria=23990,
         npc=73279,
@@ -321,21 +316,31 @@ ns.RegisterPoints(554, { -- Timeless Isle
             104115, -- Mist-Filled Spirit Lantern
         },
         routes={
-            {14003500,14202960,18201840,24200820,33400280,44000360,53000540,63600680,72401480,76002080,79002820,80603420,80606060, 80206640,77607600,75408280,63409520,42409780,35409260,26208500,20407380,16806480,14405880,14004460, loop=true}
-        }
+            {14003500,14202960,18201840,24200820,33400280,44000360,53000540,63600680,72401480,76002080,
+            79002820,80603420,80606060, 80206640,77607600,75408280,63409520,41789816,35409260,26208500,
+            20407380,16806480,14405880,14004460,
+            loop=true},
+        },
+        vignette=85,
     },
-    [40202580] = flintlord,
-    [43803320] = flintlord,
-    [46203920] = flintlord,
-    [48803700] = flintlord,
-    [55203800] = flintlord,
-    [64202860] = { -- Garnia
+    [55913785] = { -- Flintlord Gairan +4
+        additional={40202580,43803320,46203920,48803700},
+        quest=33309, -- first:33285
+        criteria=23995,
+        npc=73172,
+        loot={
+            104298, -- Ordon Death Chime
+        },
+        vignette=90,
+    },
+    [64652806] = { -- Garnia
         quest=33300, -- first: 33275
         criteria=23982,
         npc=73282,
         loot={
             {104159, pet=1328,}, -- Ruby Droplet
         },
+        vignette=75,
     },
     [61606340] = { -- Golganarr
         quest=33315, -- first: 33291
@@ -357,7 +362,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
         routes={{40208280, 40607940, 42067500, 40807000, 36206960, 30607280, 33607940, 36808100, loop=true}},
         note="Patrols counterclockwise around the village",
     },
-    [65505730] = { -- Huolon
+    [66055635] = { -- Huolon
         quest=33311, -- first: 33287
         criteria=23984,
         npc=73167,
@@ -365,9 +370,10 @@ ns.RegisterPoints(554, { -- Timeless Isle
             {104269,mount=561,}, -- Reins of the Thundering Onyx Cloud Serpent
             104286, -- Quivering Firestorm Egg
         },
-        routes={{65505730,71805100,74004500,64404060,60304490,56505130,58005840}},
+        routes={{66055635,71805100,74004500,64404060,60304490,56505130,58005840}},
+        vignette=79,
     },
-    [52408240] = { -- Jakur of Ordon
+    [53318316] = { -- Jakur of Ordon
         quest=33306, -- first: 33281
         criteria=23994,
         npc=73169,
@@ -375,6 +381,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
             {104331, toy=true,}, -- Warning Sign
             104245, -- Technique: Glyph of the Weaponmaster
         },
+        vignette=89,
     },
     [33608540] = { -- Karkanos
         quest=33292, -- first: 33258
@@ -412,6 +419,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
             104312, -- Strange Glowing Mushroom
         },
         note="Inside the cave",
+        vignette=76,
     },
     [58004860] = { -- Spelurk
         quest=32960,
@@ -432,21 +440,23 @@ ns.RegisterPoints(554, { -- Timeless Isle
         },
         note="Inside the cave",
     },
-    [71208220] = { -- Stinkbraid
+    [71358294] = { -- Stinkbraid
         quest=33305, -- first: 33280
         criteria=24144,
         npc=73704,
         loot={6657}, -- Savory Deviate Delight
+        vignette=95,
     },
-    [54004220] = { -- Tsavo'ka
+    [54064234] = { -- Tsavo'ka
         quest=33304, -- first: 33279
         criteria=23983,
         npc=72808,
         loot={
             104268, -- Pristine Stalker Hide
         },
+        vignette=78,
     },
-    [43202660] = { -- Urdur the Cauterizer
+    [43832615] = { -- Urdur the Cauterizer
         quest=33308, -- first: 33284
         criteria=23993,
         npc=73173,
@@ -454,8 +464,9 @@ ns.RegisterPoints(554, { -- Timeless Isle
             104306, -- Sunset Stone
             104296, -- Ordon Ceremonial Robes
         },
+        vignette=88,
     },
-    [57207640] = { -- Watcher Osu
+    [57597677] = { -- Watcher Osu
         quest=33322, -- first: 33321
         criteria=23992,
         npc=73170,
@@ -463,6 +474,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
             104305, -- Ashen Stone
             104296, -- Ordon Ceremonial Robes
         },
+        vignette=87,
     },
     [47008740] = { -- Zesqua
         quest=33316, -- first: 32997
@@ -529,6 +541,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
             104293, -- Scuttler's Shell
         },
         note="Rare spawn of {npc:72766:Ancient Spineclaw}",
+        vignette=80,
     },
 }, {
     achievement=8714, -- Timeless Champion
