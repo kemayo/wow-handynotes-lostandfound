@@ -85,10 +85,10 @@ ns.RegisterPoints(554, { -- Timeless Isle
         criteria=24018,
     },
     [54004720] = { -- Rope-Bound Treasure Chest
-        quest=32968,
+        quest=32968, -- 33163?
         criteria=24019,
         note="Run along the ropes",
-        path=60204590,
+        path={55154409, 57794726, 60204590},
     },
     [58706010] = { -- Mist-Covered Treasure Chest
         quest=32971,
