@@ -23,7 +23,7 @@ ns.RegisterPoints(422, { -- Dread Wastes
         loot={
             {86589,toy=true,}, -- Ai-Li's Skymirror
         },
-        vigentte=115,
+        vignette=115,
     },
     [25002860] = { -- Dak the Breaker
         quest=nil,
@@ -91,7 +91,7 @@ ns.RegisterPoints(422, { -- Dread Wastes
             {94231,mount=536,}, -- Reins of the Jade Primordial Direhorn
         },
         atlas="VignetteKillElite", scale=1.2,
-        vigentte=163,
+        vignette=163,
     },
     [37004820] = { -- Zandalari Warscout +4
         quest=nil,
@@ -103,6 +103,6 @@ ns.RegisterPoints(422, { -- Dread Wastes
         routes={
             {57606600, 53606660, 50006480, 48406100, 47006080, 45405600, 43005160, 37004820},
         },
-        vigentte=98,
+        vignette=98,
     },
 })

@@ -132,7 +132,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
             {94231,mount=536,}, -- Reins of the Jade Primordial Direhorn
         },
         atlas="VignetteKillElite", scale=1.2,
-        vigentte=163,
+        vignette=163,
     },
     [20004060] = { -- Zandalari Warscout +4
         quest=nil,
@@ -144,7 +144,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         routes={
             {20004060,25604140,31004680,36005840,38606440,42805860,50404120,51202900,57802920},
         },
-        vigentte=98,
+        vignette=98,
     },
     [32403420] = { -- Krakkanon
         quest=nil,

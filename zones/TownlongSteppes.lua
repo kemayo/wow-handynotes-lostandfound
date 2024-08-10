@@ -28,6 +28,7 @@ ns.RegisterPoints(388, { -- Townlong Steppes
         loot={
             87222, -- Big Bag of Linens
         },
+        vignette=130,
     },
     [62803540] = { -- Kah'tir
         quest=nil,
@@ -89,7 +90,7 @@ ns.RegisterPoints(388, { -- Townlong Steppes
             {94231,mount=536,}, -- Reins of the Jade Primordial Direhorn
         },
         atlas="VignetteKillElite", scale=1.2,
-        vigentte=163,
+        vignette=163,
     },
     [48808460] = { -- Zandalari Warscout +4
         quest=nil,
@@ -101,7 +102,7 @@ ns.RegisterPoints(388, { -- Townlong Steppes
         routes={
             {48808460, 46808960, 43609080, 40808980, 37008480, 40008040, 40407740, 44207480, 47407440, 49407320},
         },
-        vigentte=98,
+        vignette=98,
     },
     [35205120] = { -- Krakkanon
         quest=nil,

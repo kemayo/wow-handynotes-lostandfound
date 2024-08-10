@@ -98,7 +98,7 @@ ns.RegisterPoints(371, { -- The Jade Forest
             {94231,mount=536,}, -- Reins of the Jade Primordial Direhorn
         },
         atlas="VignetteKillElite", scale=1.2,
-        vigentte=163,
+        vignette=163,
     },
     [50803680] = { -- Zandalari Warscout
         quest=nil,
@@ -110,7 +110,7 @@ ns.RegisterPoints(371, { -- The Jade Forest
         routes={
             {50803680, 53003460, 52603260, 54202760, 52802380, 53001960, 47602100, 45401740, 43201720},
         },
-        vigentte=98,
+        vignette=98,
     },
     [51002080] = { -- Krakkanon +2
         quest=nil,
