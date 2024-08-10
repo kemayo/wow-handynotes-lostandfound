@@ -8,45 +8,52 @@ ns.RegisterPoints(504, { -- Isle of Thunder
     [44603000] = { -- Al'tabim the All-Seeing
         criteria=22826,
         npc=70000,
+        vignette=169,
     },
-    [48402540] = { -- Backbreaker Uru
-        criteria=22827,
-        npc=70001,
-    },
-    [61404940] = { -- God-Hulk Ramuk
+    [61494959] = { -- God-Hulk Ramuk
         criteria=22825,
         npc=69999,
+        vignette=168,
     },
-    [53605300] = { -- Goda
+    [53805323] = { -- Goda
         criteria=22824,
         npc=69998,
+        vignette=167,
     },
-    [48208700] = { -- Haywire Sunreaver Construct
+    [48598768] = { -- Haywire Sunreaver Construct
         criteria=22820,
         npc=50358,
         loot={
             {94124,pet=1178,}, -- Sunreaver Micro-Sentry
         },
+        vignette=6142,
     },
-    [33408080] = { -- Ku'lai the Skyclaw +2
+    [37738285] = { -- Ku'lai the Skyclaw +2
         criteria=22822,
         npc=69996,
+        vignette=166,
     },
-    [54403560] = { -- Lu-Ban
+    [54343551] = { -- Lu-Ban
         criteria=22828,
         npc=70002,
+        vignette=171,
     },
-    [63444916] = { -- Molthor +2
+    [63444916] = { -- Molthor
+        -- technically at 59603614, but this is the door
         criteria=22829,
         npc=70003,
+        vignette=172,
+        note="At the back of the room",
     },
     [35006220] = { -- Mumta
         criteria=22821,
         npc=69664,
+        vignette=162,
     },
-    [50407220] = { -- Progenitus
+    [51307118] = { -- Progenitus
         criteria=22823,
         npc=69997,
+        vignette=165,
     },
 }, {
     achievement=8103, -- Champions of Lei Shen
@@ -56,6 +63,8 @@ ns.RegisterPoints(505, { -- Lightning Vein Mine
         achievement=8103, -- Champions of Lei Shen
         criteria=22827,
         npc=70001,
+        vignette=170,
+        parent=true,
     },
 })
 ns.RegisterPoints(506, { -- The Swollen Vault
@@ -63,6 +72,8 @@ ns.RegisterPoints(506, { -- The Swollen Vault
         achievement=8103, -- Champions of Lei Shen
         criteria=22829,
         npc=70003,
+        vignette=172,
+        -- not parent, because we want to have the main map point as the door
     },
 })
 
@@ -76,11 +87,13 @@ ns.RegisterPoints(504, { -- Isle of Thunder
         },
         atlas="VignetteKillElite", scale=1.2,
     },
-    [39408140] = { -- Ra'sha
+    [39438159] = { -- Ra'sha
         npc=70530,
         loot={
             95566, -- Ra'sha's Sacrificial Dagger
         },
+        path=40658016,
+        vignette=96,
     },
     [30407830] = {
         achievement=8112, -- Blue Response
