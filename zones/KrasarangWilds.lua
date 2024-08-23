@@ -46,6 +46,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         quest=nil,
         criteria=21085,
         npc=50816,
+        vignette=118,
     },
     [51808900] = { -- Spriggin
         quest=nil,
@@ -71,6 +72,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
             92783, -- Mark of the Hardened Grunt
         },
         faction="Horde",
+        vignette=103,
     },
     [87402920] = { -- Disha Fearwarden
         criteria=3, -- Champion of the Light
@@ -80,6 +82,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
             92787, -- Horde Insignia of Conquering
         },
         faction="Horde",
+        vignette=102,
     },
     [13605700] = { -- Kar Warmaker
         criteria=1, -- Champion of Arms
@@ -89,6 +92,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
             92782, -- Steadfast Footman's Medallion
         },
         faction="Alliance",
+        vignette=100,
     },
     [84403100] = { -- Mavis Harms
         criteria=2, -- Champion of the Shadows
@@ -98,6 +102,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
             92785, -- Kor'kron Book of Hurting
         },
         faction="Horde",
+        vignette=104,
     },
     [10605660] = { -- Muerta
         criteria=3, -- Champion of the Light
@@ -107,6 +112,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
             92786, -- Alliance Insignia of Conquering
         },
         faction="Alliance",
+        vignette=99,
     },
     [13006660] = { -- Ubunti the Shade
         criteria=2, -- Champion of the Shadows
@@ -116,6 +122,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
             92784, -- SI:7 Operative's Manual
         },
         faction="Alliance",
+        vignette=101,
     },
 }, {
     art=499,

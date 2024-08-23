@@ -79,6 +79,7 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
         loot={
             86580, -- Wilted Lilypad
         },
+        vignette=133,
     },
     [36802540] = { -- Sulik'shor
         quest=nil,

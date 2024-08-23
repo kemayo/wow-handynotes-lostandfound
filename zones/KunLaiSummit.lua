@@ -17,7 +17,7 @@ ns.RegisterPoints(381, { -- PrankstersHollow, cave in Kun-Lai
 ns.RegisterPoints(379, { -- Kun Lai Summit
     [64234513] = { loot={86471}, quest=31420, note="in the cave" }, -- Ancient Mogu Tablet
     [50366177] = { label="Hozen Treasure Cache", note="in the cave", quest=31414, },
-    [36707970] = { label="Lost Adventurer's Belongings", quest=31418, },
+    [36747982] = { label="Lost Adventurer's Belongings", quest=31418, },
     [52575154] = { loot={86430}, note="In Rikktik's Tiny Chest", quest=31419, path=52285088, }, -- Rikktik's Tick Remover
     [72013396] = { loot={86422}, quest=31416, }, -- Statue of Xuen
     [59405300] = { label="Stolen Sprite Treasure", note="in the cave", quest=31415, },
@@ -31,7 +31,7 @@ ns.RegisterPoints(380, { -- HowlingwindCavern, cave in Kun-Lai
 })
 
 ns.RegisterPoints(379, {
-    [47007300] = { label="Mo-Mo's Treasure Chest", quest=31868, },
+    [47887350] = { label="Mo-Mo's Treasure Chest", quest=31868, },
 }, ns.junk{})
 
 -- Rares
@@ -49,22 +49,25 @@ ns.RegisterPoints(379, { -- Kun-Lai Summit
         quest=nil,
         criteria=21072,
         npc=50341,
+        vignette=152,
     },
-    [57007580] = { -- Havak
+    [59357376] = { -- Havak
         quest=nil,
         criteria=21079,
         npc=50354,
         loot={
             {86573,toy=true,}, -- Shard of Archstone
         },
+        vignette=145,
     },
-    [47408120] = { -- Korda Torros
+    [47508123] = { -- Korda Torros
         quest=nil,
         criteria=21100,
         npc=50332,
         loot={
             86566, -- Forager's Gloves
         },
+        vignette=159,
     },
     [63801380] = { -- Nessos the Oracle
         quest=nil,
@@ -73,6 +76,7 @@ ns.RegisterPoints(379, { -- Kun-Lai Summit
         loot={
             {86584, toy=true,}, -- Hardened Shell
         },
+        vignette=124,
     },
     [44806380] = { -- Scritch
         quest=nil,
@@ -81,14 +85,16 @@ ns.RegisterPoints(379, { -- Kun-Lai Summit
         loot={
             86592, -- Hozen Peace Pipe
         },
+        vignette=110,
     },
-    [36407960] = { -- Ski'thik
+    [36667984] = { -- Ski'thik
         quest=nil,
         criteria=21065,
         npc=50733,
         loot={
             86577, -- Rod of Ambershaping
         },
+        vignette=138,
     },
     [73007660] = { -- Zai the Outcast
         quest=nil,
