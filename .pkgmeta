@@ -1,4 +1,1 @@
 package-as: HandyNotes_MistsOfPandariaTreasures
-
-externals:
-   lib/LibUIDropDownMenu: https://repos.curseforge.com/wow/libuidropdownmenu/trunk/LibUIDropDownMenu
