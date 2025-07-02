@@ -218,5 +218,5 @@ ns.RegisterPoints(504, { -- Isle of Thunder
 }, {
     achievement=8101,
     active=ns.conditions.Item(94221, 3), -- Shan'ze Ritual Stone
-    texture=ns.atlas_texture("poi-torghast", {r=1, g=0, b=1})
+    texture=ns.atlas_texture("reagents", {r=1, g=0, b=1}) -- used to be poi-torghast but isn't available in mop classic
 })
