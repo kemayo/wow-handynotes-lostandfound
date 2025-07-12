@@ -18,4 +18,15 @@ ns.RegisterPoints(507, { -- Isle of Giants
             94158, -- Big Bag of Zandalari Supplies
         },
     },
+    [32685411] = { -- Ku'ma
+        label="{npc:70022:Ku'ma}",
+        loot={
+            {94190, pet=true, requires=ns.conditions.Item(94288, 999)}, -- Spectral Porcupette
+            {94290, mount=true, requires=ns.conditions.Item(94288, 9999)}, -- Reins of the Bone-White Primal Raptor
+        },
+        showallloot=true,
+        atlas="banker",
+        minimap=true,
+        path=27215804,
+    }
 })
