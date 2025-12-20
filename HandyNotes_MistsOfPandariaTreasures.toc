@@ -1,4 +1,4 @@
-## Interface: 110207, 50502, 50503
+## Interface: 120001, 120000, 110207, 50502, 50503
 ## Title: HandyNotes: Mists of Pandaria (Treasures and Rares)
 ## Notes: Where everything is in Pandaria
 ## Author: Kemayo
