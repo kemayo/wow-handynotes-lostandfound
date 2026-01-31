@@ -119,5 +119,12 @@ ns.RegisterPoints(371, { -- The Jade Forest
             88563, -- Nat's Fishing Journal
         },
     },
-
+    [57601560] = { -- Frederick the Fabulous
+        npc=253602,
+        loot={{248934, decor=true}}, -- Golden Cloud Serpent Treasure Chest
+        requires=ns.conditions.Expansion(LE_EXPANSION_WAR_WITHIN), -- if classic ever get here *and* gets weird about when it rolls out decor, 11.2.7
+        hide_before=ns.conditions.QuestComplete(92581), -- Last Light
+        note="In the sunken ship",
+        minimap=true,
+    }
 })
