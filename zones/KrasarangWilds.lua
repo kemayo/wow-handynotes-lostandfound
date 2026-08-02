@@ -217,6 +217,6 @@ ns.RegisterPoints(379, { -- Kun Lai Summit
         npc=66933, -- Kishak
         loot={90168}, -- Kishak's Clamshell
         found={ns.conditions.Item(90168)},
-        route={54202160, 54002060, 51601840, 47001840, 45002060, 44201940, 42202380},
+        routes={{54202160, 54002060, 51601840, 47001840, 45002060, 44201940, 42202380}},
     },
 }, makrura)
