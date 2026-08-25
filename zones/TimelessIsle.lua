@@ -102,7 +102,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
     },
 }, {
     achievement=8726,
-    atlas="VignetteLootElite", scale=1.1,
+    atlas="VignetteLootElite", scale=1.3,
 })
 
 -- Where There's Pirates There's Booty
@@ -128,7 +128,7 @@ ns.RegisterPoints(554, { -- Timeless Isle
     },
 }, {
     achievement=8727,
-    atlas="VignetteLootElite", scale=1.1,
+    atlas="VignetteLootElite", scale=1.3,
 })
 
 -- Legend of the Past
