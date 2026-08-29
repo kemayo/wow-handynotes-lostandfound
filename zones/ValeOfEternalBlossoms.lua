@@ -105,7 +105,7 @@ ns.RegisterPoints(390, { -- Vale of Eternal Blossoms
         npc=58768,
         vignette=34,
     },
-    [30365802] = { -- General Temuja +2
+    [30365802] = { -- General Temuja
         quest=nil,
         criteria=20519,
         npc=63101,
@@ -182,7 +182,7 @@ ns.RegisterPoints(395, {-- Guo-Lai Halls
 })
 
 ns.RegisterPoints(390, { -- Vale of Eternal Blossoms
-    [16603400] = { -- Alani +38
+    [16603400] = { -- Alani
         quest=nil,
         npc=64403,
         loot={

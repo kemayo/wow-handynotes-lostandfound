@@ -17,14 +17,14 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
 }, ns.riches{})
 
 ns.RegisterPoints(376, { -- Valley of the Four Winds
-	[92003900] = { loot={87524}, quest=31869, }, -- Boat-Building Instructions
+    [92003900] = { loot={87524}, quest=31869, }, -- Boat-Building Instructions
     [52056382] = { loot={110505}, quest=37246, } -- Mysterious Fruit Pile (Mesmerizing Fruit Hat)
 }, ns.junk{})
 
 -- Rares
 
 ns.RegisterPoints(376, { -- Valley of the Four Winds
-    [32806240] = { -- Blackhoof +2
+    [32806240] = { -- Blackhoof
         quest=nil,
         criteria=21098,
         npc=51059,
@@ -32,7 +32,7 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
             {86565, toy=true}, -- Battle Horn
         }
     },
-    [13803860] = { -- Bonobos +2
+    [13803860] = { -- Bonobos
         quest=nil,
         criteria=21049,
         npc=50828,
@@ -48,7 +48,7 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
             86572, -- Terracotta Fragment
         },
     },
-    [8005920] = { -- Nal'lak the Ripper +2
+    [8005920] = { -- Nal'lak the Ripper
         quest=nil,
         criteria=21063,
         npc=50364,
@@ -64,7 +64,7 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
             86587, -- Seed of Tranquil Growth
         },
     },
-    [67405940] = { -- Salyin Warscout +3
+    [67405940] = { -- Salyin Warscout
         quest=nil,
         criteria=21091,
         npc=50783,
@@ -72,7 +72,7 @@ ns.RegisterPoints(376, { -- Valley of the Four Winds
             {86583, toy=true,}, -- Salyin Battle Banner
         },
     },
-    [52402820] = { -- Sele'na +3
+    [52402820] = { -- Sele'na
         quest=nil,
         criteria=21056,
         npc=50766,

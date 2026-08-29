@@ -119,7 +119,7 @@ ns.RegisterPoints(379, { -- Kun-Lai Summit
         },
         atlas="VignetteKillElite", scale=1.2,
     },
-    [64606400] = { -- Zandalari Warscout +4
+    [64606400] = { -- Zandalari Warscout
         quest=nil,
         npc=69768,
         loot={

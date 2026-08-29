@@ -30,7 +30,7 @@ ns.RegisterPoints(422, { -- Dread Wastes
         criteria=21102,
         npc=50334,
     },
-    [35603060] = { -- Gar'lok +2
+    [35603060] = { -- Gar'lok
         quest=nil,
         criteria=21067,
         npc=50739,
@@ -93,7 +93,7 @@ ns.RegisterPoints(422, { -- Dread Wastes
         atlas="VignetteKillElite", scale=1.2,
         vignette=163,
     },
-    [37004820] = { -- Zandalari Warscout +4
+    [37004820] = { -- Zandalari Warscout
         quest=nil,
         npc=69768,
         loot={

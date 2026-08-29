@@ -28,7 +28,7 @@ ns.RegisterPoints(504, { -- Isle of Thunder
         },
         vignette=6142,
     },
-    [37738285] = { -- Ku'lai the Skyclaw +2
+    [37738285] = { -- Ku'lai the Skyclaw
         criteria=22822,
         npc=69996,
         vignette=166,
@@ -59,7 +59,7 @@ ns.RegisterPoints(504, { -- Isle of Thunder
     achievement=8103, -- Champions of Lei Shen
 })
 ns.RegisterPoints(505, { -- Lightning Vein Mine
-    [33802760] = { -- Backbreaker Uru +5
+    [33802760] = { -- Backbreaker Uru
         achievement=8103, -- Champions of Lei Shen
         criteria=22827,
         npc=70001,
@@ -68,7 +68,7 @@ ns.RegisterPoints(505, { -- Lightning Vein Mine
     },
 })
 ns.RegisterPoints(506, { -- The Swollen Vault
-    [36003250] = { -- Molthor +6
+    [36003250] = { -- Molthor
         achievement=8103, -- Champions of Lei Shen
         criteria=22829,
         npc=70003,
@@ -136,11 +136,9 @@ ns.RegisterPoints(504, { -- Isle of Thunder
     [28808080] = {},
     [40807470] = {},
     [35006300] = {},
-    [34804750] = {},
     [39006500] = {},
     [53005300] = {},
     [44206740] = {},
-    [35006300] = {},
     [37006820] = {},
     [51007400] = {},
     [50707070] = {},

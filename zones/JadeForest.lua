@@ -18,8 +18,8 @@ ns.RegisterPoints(373, { -- Greenstone Quarry, cave in Jade Forest
     [32606270] = {}, -- Ancient Pandaren Mining Pick
     [38231394] = {}, -- Ancient Pandaren Mining Pick
 }, ns.treasure{
-	quest=31399,
-	loot={85777},
+    quest=31399,
+    loot={85777},
 })
 
 ns.RegisterPoints(371, { -- The Jade Forest
@@ -62,7 +62,7 @@ ns.RegisterPoints(371, { -- The Jade Forest
         criteria=21048,
         npc=50823,
     },
-    [40801520] = { -- Morgrinn Crackfang +2
+    [40801520] = { -- Morgrinn Crackfang
         quest=nil,
         criteria=21076,
         npc=50350,
@@ -112,7 +112,7 @@ ns.RegisterPoints(371, { -- The Jade Forest
         },
         vignette=98,
     },
-    [51002080] = { -- Krakkanon +2
+    [51002080] = { -- Krakkanon
         quest=nil,
         npc=70323,
         loot={

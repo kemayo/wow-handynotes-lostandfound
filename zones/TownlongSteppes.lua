@@ -35,7 +35,7 @@ ns.RegisterPoints(388, { -- Townlong Steppes
         criteria=21080,
         npc=50355,
     },
-    [41807860] = { -- Lith'ik the Stalker +2
+    [41807860] = { -- Lith'ik the Stalker
         quest=nil,
         criteria=21066,
         npc=50734,
@@ -92,7 +92,7 @@ ns.RegisterPoints(388, { -- Townlong Steppes
         atlas="VignetteKillElite", scale=1.2,
         vignette=163,
     },
-    [48808460] = { -- Zandalari Warscout +4
+    [48808460] = { -- Zandalari Warscout
         quest=nil,
         npc=69768,
         loot={

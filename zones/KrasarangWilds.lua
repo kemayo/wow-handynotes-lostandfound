@@ -141,7 +141,7 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         atlas="VignetteKillElite", scale=1.2,
         vignette=163,
     },
-    [20004060] = { -- Zandalari Warscout +4
+    [20004060] = { -- Zandalari Warscout
         quest=nil,
         npc=69768,
         loot={

@@ -6,7 +6,7 @@ ns.RegisterPoints(433, { -- Veiled Stair, TheHiddenPass
 })
 
 ns.RegisterPoints(433, { -- The Veiled Stair
-    [62407460] = { -- Willy Wilder +3
+    [62407460] = { -- Willy Wilder
         quest=nil,
         npc=70126,
         loot={93194}, -- Bloodied Scroll
