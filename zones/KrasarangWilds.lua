@@ -21,42 +21,66 @@ ns.RegisterPoints(418, { -- Krasarang Wilds
         quest=nil,
         criteria=21092,
         npc=50787,
+        loot={
+            90723, -- Arness's Scaled Leggings
+        },
     },
     [30603820] = { -- Cournith Waterstrider
         quest=nil,
         criteria=21057,
         npc=50768,
+        loot={
+            90721, -- Cournith Waterstrider's Silken Finery
+        },
     },
     [53403860] = { -- Gaarn the Toxic +2
         quest=nil,
         criteria=21071,
         npc=50340,
+        loot={
+            90725, -- Gaarn's Leggings of Infestation
+        },
     },
     [39402880] = { -- Go-Kan
         quest=nil,
         criteria=21099,
         npc=50331,
+        loot={
+            90719, -- Go-Kan's Golden Trousers
+        },
     },
     [67202300] = { -- Qu'nas
         quest=nil,
         criteria=21078,
         npc=50352,
+        loot={
+            90717, -- Qu'nas' Apocryphal Legplates
+        },
     },
     [39405520] = { -- Ruun Ghostpaw
         quest=nil,
         criteria=21085,
         npc=50816,
+        loot={
+            90720, -- Silent Leggings of the Ghostpaw
+        },
         vignette=118,
     },
     [51808900] = { -- Spriggin
         quest=nil,
         criteria=21050,
         npc=50830,
+        loot={
+            90724, -- Spriggin's Sproggin' Leggin'
+        },
     },
     [14403540] = { -- Torik-Ethis
         quest=nil,
         criteria=21064,
         npc=50388,
+        loot={
+            90718, -- Torik-Ethis' Bloodied Legguards
+        },
     },
 }, {
     achievement=7439, -- Glorious!
