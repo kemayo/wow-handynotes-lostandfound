@@ -28,4 +28,15 @@ ns.junk = ns.nodeMaker{
     scale=0.9,
 }
 
+-- The Zandalari scouting parties roll one pool between them, in every zone
+-- they turn up in.
+ns.zandalari_loot = {
+    94159, -- Small Bag of Zandalari Supplies
+    94158, -- Big Bag of Zandalari Supplies
+    94223, -- Stolen Shado-Pan Insignia
+    94225, -- Stolen Celestial Insignia
+    94226, -- Stolen Klaxxi Insignia
+    94227, -- Stolen Golden Lotus Insignia
+}
+
 ns.RegisterPoints(424, {}) -- continent
