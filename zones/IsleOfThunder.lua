@@ -1,8 +1,12 @@
 local myname, ns = ...
 
--- quests:
 -- 32610 = got a Shan'ze Ritual Stone from a rare mob
 -- 32626 = got a Key to the Palace of Lei Shen from a mob drop
+
+local loot_shared = {
+    {94221, quest=32610}, -- Shan'ze Ritual Stone
+    {94222, quest=32626}, -- Key to the Palace of Lei Shen
+}
 
 ns.RegisterPoints(504, { -- Isle of Thunder
     [44603000] = { -- Al'tabim the All-Seeing
@@ -45,7 +49,7 @@ ns.RegisterPoints(504, { -- Isle of Thunder
         vignette=172,
         note="At the back of the room",
     },
-    [35006220] = { -- Mumta
+    [35116239] = { -- Mumta
         criteria=22821,
         npc=69664,
         vignette=162,
@@ -57,9 +61,7 @@ ns.RegisterPoints(504, { -- Isle of Thunder
     },
 }, {
     achievement=8103, -- Champions of Lei Shen
-    loot_shared={
-        94222, -- Key to the Palace of Lei Shen
-    },
+    loot_shared=loot_shared,
 })
 ns.RegisterPoints(505, { -- Lightning Vein Mine
     [33802760] = { -- Backbreaker Uru
@@ -70,9 +72,7 @@ ns.RegisterPoints(505, { -- Lightning Vein Mine
         parent=true,
     },
 }, {
-    loot_shared={
-        94222, -- Key to the Palace of Lei Shen
-    },
+    loot_shared=loot_shared,
 })
 ns.RegisterPoints(506, { -- The Swollen Vault
     [36003250] = { -- Molthor
@@ -83,9 +83,7 @@ ns.RegisterPoints(506, { -- The Swollen Vault
         -- not parent, because we want to have the main map point as the door
     },
 }, {
-    loot_shared={
-        94222, -- Key to the Palace of Lei Shen
-    },
+    loot_shared=loot_shared,
 })
 
 ns.RegisterPoints(504, { -- Isle of Thunder
